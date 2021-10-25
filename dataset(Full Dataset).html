@@ -1,0 +1,5699 @@
+<!DOCTYPE html>
+<html class="ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="SAS 9.4" name="generator"/>
+<title>Results: Samples.sas</title>
+<style>
+/*<![CDATA[*/
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.c section > table, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.c section > pre, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.c div > table,
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.c div > pre, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.c article > table, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.c article > pre,
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.j section > table, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.j section > pre, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.j div > table,
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.j div > pre, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.j article > table, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.j article > pre,
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.c p.note, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.c p.warning, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.c p.error, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.c p.fatal,
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.j p.note, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.j p.warning, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.j p.error, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.j p.fatal,
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.c > table.layoutcontainer, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body.j > table.layoutcontainer { margin-left: auto; margin-right: auto }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.l table, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.l pre, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.l p.note,
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.l p.warning, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.l p.error, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.l p.fatal { margin-left: 0 }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.c table, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.c pre, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.c p.note,
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.c p.warning, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.c p.error, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.c p.fatal { margin-left: auto; margin-right: auto }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.r table, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.r pre, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.r p.note,
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.r table, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.r pre, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.r p.note,
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.r p.warning, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.r p.error, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion.r p.fatal { margin-right: 0 }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 article, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 aside, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 details, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 figcaption, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 figure, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 footer, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 header, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 hgroup, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 nav, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 section { display: block }
+html.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 { font-size: 100% }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body { margin: 1em; font-size: 13px; line-height: 1.231 }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 sup { position: relative; vertical-align: baseline; bottom: 0.25em; font-size: 0.8em }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 sub { position: relative; vertical-align: baseline; top: 0.25em; font-size: 0.8em }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 ul, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 ol { margin: 1em 0; padding: 0 0 0 40px }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 dd { margin: 0 0 0 40px }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 nav ul, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0 }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 img { border: 0; vertical-align: middle }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 svg:not(:root) { overflow: hidden }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 figure { margin: 0 }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 table { border-collapse: collapse; border-spacing: 0 }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutcontainer { border-collapse: separate; border-spacing: 0 }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 p { margin-top: 0; text-align: left }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 h1.heading1 { text-align: left }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 h2.heading2 { text-align: left }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 h3.heading3 { text-align: left }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 h4.heading4 { text-align: left }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 h5.heading5 { text-align: left }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 h6.heading6 { text-align: left }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 span { text-align: left }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 table { margin-bottom: 1em }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 td, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 th { text-align: left; padding: 3px 6px; vertical-align: top }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 td[class$="fixed"], .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 th[class$="fixed"] { white-space: pre }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 section, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 article { padding-top: 1px; padding-bottom: 8px }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .stacked-value { text-align: left; display: block }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .stacked-cell > .stacked-value, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 td.data > td.data, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 th.data > td.data, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 th.data > th.data, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 td.data > th.data, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 th.header > th.header { border: 0 }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .stacked-cell > div.data { border-width: 0 }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systitleandfootercontainer { white-space: nowrap; margin-bottom: 1em }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systitleandfootercontainer > p { margin: 0 }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systitleandfootercontainer > p > span { display: inline-block; width: 100%; white-space: normal }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .batch { display: table }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .toc { display: none }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .proc_note_group, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .proc_title_group { margin-bottom: 1em }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 p.proctitle { margin: 0 }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 p.note, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 p.warning, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 p.error, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 p.fatal { display: table }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .notebanner, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .warnbanner, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .errorbanner, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .fatalbanner,
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .notecontent, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .warncontent, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .errorcontent, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .fatalcontent { display: table-cell; padding: 0.5em }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .notebanner, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .warnbanner, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .errorbanner, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .fatalbanner { padding-right: 0 }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body > div > ol li { text-align: left }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .beforecaption > h4 { margin-top: 0; margin-bottom: 0 }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .c { text-align: center }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .r { text-align: right }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .l { text-align: left }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .j { text-align: justify }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .d { text-align: right }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .b { vertical-align: bottom }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .m { vertical-align: middle }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .t { vertical-align: top }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .accessiblecaption {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 a:active { color: #800080 }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .aftercaption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    padding-top: 4pt;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .batch > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .batch > tbody, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .batch > thead, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .batch > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .batch { border: hidden; }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .batch {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: 'SAS Monospace', 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    padding: 7px;
+    }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .beforecaption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .body {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .bodydate {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: right;
+    vertical-align: top;
+    width: 100%;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .bycontentfolder {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .byline {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .bylinecontainer > col, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .bylinecontainer > colgroup > col, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .bylinecontainer > colgroup, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .bylinecontainer > tr, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .bylinecontainer > * > tr, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .bylinecontainer > thead, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .bylinecontainer > tbody, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .bylinecontainer > tfoot { border: none; }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .bylinecontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .caption {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .cell, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .container {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .contentfolder, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .contentitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .contentproclabel, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .contentprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .contents {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .contentsdate {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .contenttitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .continued {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .data, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .dataemphasis {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .dataemphasisfixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .dataempty {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .datafixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .datastrong {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .datastrongfixed {
+    background-color: #ffffff;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .date {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .document {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .errorbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .errorcontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .errorcontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .extendedpage {
+    background-color: #fafbfe;
+    border-style: solid;
+    border-width: 1pt;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .fatalbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .fatalcontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .fatalcontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .folderaction {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .footer {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .footeremphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .footeremphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .footerempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .footerfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .footerstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .footerstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .frame {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .graph > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .graph > tbody, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .graph > thead, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .graph > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .graph { border: hidden; }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .graph {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .header {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .headeremphasis {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .headeremphasisfixed {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .headerempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .headerfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .headersandfooters {
+    background-color: #edf2f9;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .headerstrong {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .headerstrongfixed {
+    background-color: #d8dbd3;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .heading1, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .heading2, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .heading3, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .heading4, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .heading5, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .heading6 { font-family: Arial, Helvetica, sans-serif }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .index {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .indexaction, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .indexitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .indexprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .indextitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutcontainer, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .layoutregion {
+    border-width: 0;
+    border-spacing: 30px;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .linecontent {
+    background-color: #fafbfe;
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 a:link { color: #0000ff }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .list {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: disc;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .list10 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .list2 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: circle;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .list3, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .list4, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .list5, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .list6, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .list7, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .list8, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .list9 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .listitem {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: disc;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .listitem10 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .listitem2 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: circle;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .listitem3, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .listitem4, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .listitem5, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .listitem6, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .listitem7, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .listitem8, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .listitem9 {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: square;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .note {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .notebanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .notecontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .notecontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .output > colgroup {
+    border-left: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .output > tbody, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .output > thead, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .output > tfoot {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .output { border: hidden; }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .output {
+    background-color: #fafbfe;
+    border: 1px solid #c1c1c1;
+    border-collapse: separate;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .pageno {
+    background-color: #fafbfe;
+    border-spacing: 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: top;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .pages {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: decimal;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .pagesdate {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .pagesitem {
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    list-style-type: none;
+    margin-left: 6pt;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .pagesproclabel, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .pagesprocname {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .pagestitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .paragraph {
+    background-color: #fafbfe;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .parskip > col, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .parskip > colgroup > col, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .parskip > colgroup, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .parskip > tr, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .parskip > * > tr, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .parskip > thead, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .parskip > tbody, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .parskip > tfoot { border: none; }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .parskip {
+    border: none;
+    border-spacing: 0;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+    }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .prepage {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .proctitle {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .proctitlefixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .rowfooter {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .rowfooteremphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .rowfooteremphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .rowfooterempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .rowfooterfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .rowfooterstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .rowfooterstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .rowheader {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .rowheaderemphasis {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .rowheaderemphasisfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: italic;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .rowheaderempty {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .rowheaderfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .rowheaderstrong {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .rowheaderstrongfixed {
+    background-color: #edf2f9;
+    border-color: #b0b7bb;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    color: #112277;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemfooter, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemfooter10, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemfooter2, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemfooter3, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemfooter4, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemfooter5, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemfooter6, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemfooter7, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemfooter8, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemfooter9 {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemtitle, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemtitle10, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemtitle2, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemtitle3, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemtitle4, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemtitle5, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemtitle6, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemtitle7, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemtitle8, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systemtitle9 {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systitleandfootercontainer > col, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systitleandfootercontainer > colgroup > col, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systitleandfootercontainer > colgroup, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systitleandfootercontainer > tr, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systitleandfootercontainer > * > tr, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systitleandfootercontainer > thead, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systitleandfootercontainer > tbody, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systitleandfootercontainer > tfoot { border: none; }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .systitleandfootercontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .table > col, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .table > colgroup > col {
+    border-left: 1px solid #c1c1c1;
+    border-right: 0 solid #c1c1c1;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .table > tr, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .table > * > tr {
+    border-top: 1px solid #c1c1c1;
+    border-bottom: 0 solid #c1c1c1;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .table { border: hidden; }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .table {
+    border-color: #c1c1c1;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .titleandnotecontainer > col, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .titleandnotecontainer > colgroup > col, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .titleandnotecontainer > colgroup, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .titleandnotecontainer > tr, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .titleandnotecontainer > * > tr, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .titleandnotecontainer > thead, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .titleandnotecontainer > tbody, .ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .titleandnotecontainer > tfoot { border: none; }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .titleandnotecontainer {
+    background-color: #fafbfe;
+    border: none;
+    border-spacing: 1px;
+    color: #000000;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .titlesandfooters {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .usertext {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 a:visited { color: #800080 }
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .warnbanner {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: bold;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .warncontent {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: Arial, 'Albany AMT', Helvetica, Helv;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+.ods_e381ab35-ab0e-449e-aded-6eee9b95bbe2 .warncontentfixed {
+    background-color: #fafbfe;
+    color: #112277;
+    font-family: 'Courier New', Courier;
+    font-size: x-small;
+    font-style: normal;
+    font-weight: normal;
+}
+/*]]>*/
+</style>
+</head>
+<body class="body">
+<div id="div_e381ab35-ab0e-449e-aded-6eee9b95bbe2" class="c body">
+<h1 class="body toc">Results: Samples.sas</h1>
+<section data-name="Print" data-sec-type="proc">
+<div id="IDX" class="systitleandfootercontainer" style="border-spacing: 1px">
+<p><span class="c systemtitle">The Full Dataset</span> </p>
+</div>
+<h1 class="contentprocname toc">The Print Procedure</h1>
+<article aria-label="Data Set WORK.MODELBUILDING">
+<h1 class="contentitem toc">Data Set WORK.MODELBUILDING</h1>
+<table class="table" style="border-spacing: 0" aria-label="Data Set WORK.MODELBUILDING">
+<caption aria-label="Data Set WORK.MODELBUILDING"></caption>
+<colgroup><col/></colgroup><colgroup><col/><col/><col/><col/><col/><col/><col/><col/></colgroup>
+<thead>
+<tr>
+<th class="r header" scope="col">Obs</th>
+<th class="r header" scope="col">No</th>
+<th class="r header" scope="col">X1 transaction date</th>
+<th class="r header" scope="col">X2 house age</th>
+<th class="r header" scope="col">X3 distance to the nearest MRT s</th>
+<th class="r header" scope="col">X4 number of convenience stores</th>
+<th class="r header" scope="col">X5 latitude</th>
+<th class="r header" scope="col">X6 longitude</th>
+<th class="r header" scope="col">Y house price of unit area</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="r rowheader" scope="row">1</th>
+<td class="r data">1</td>
+<td class="r data">2012.917</td>
+<td class="r data">32</td>
+<td class="r data">84.87882</td>
+<td class="r data">10</td>
+<td class="r data">24.98298</td>
+<td class="r data">121.54024</td>
+<td class="r data">37.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">2</th>
+<td class="r data">2</td>
+<td class="r data">2012.917</td>
+<td class="r data">19.5</td>
+<td class="r data">306.5947</td>
+<td class="r data">9</td>
+<td class="r data">24.98034</td>
+<td class="r data">121.53951</td>
+<td class="r data">42.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">3</th>
+<td class="r data">3</td>
+<td class="r data">2013.583</td>
+<td class="r data">13.3</td>
+<td class="r data">561.9845</td>
+<td class="r data">5</td>
+<td class="r data">24.98746</td>
+<td class="r data">121.54391</td>
+<td class="r data">47.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">4</th>
+<td class="r data">4</td>
+<td class="r data">2013.5</td>
+<td class="r data">13.3</td>
+<td class="r data">561.9845</td>
+<td class="r data">5</td>
+<td class="r data">24.98746</td>
+<td class="r data">121.54391</td>
+<td class="r data">54.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">5</th>
+<td class="r data">5</td>
+<td class="r data">2012.833</td>
+<td class="r data">5</td>
+<td class="r data">390.5684</td>
+<td class="r data">5</td>
+<td class="r data">24.97937</td>
+<td class="r data">121.54245</td>
+<td class="r data">43.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">6</th>
+<td class="r data">6</td>
+<td class="r data">2012.667</td>
+<td class="r data">7.1</td>
+<td class="r data">2175.03</td>
+<td class="r data">3</td>
+<td class="r data">24.96305</td>
+<td class="r data">121.51254</td>
+<td class="r data">32.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">7</th>
+<td class="r data">7</td>
+<td class="r data">2012.667</td>
+<td class="r data">34.5</td>
+<td class="r data">623.4731</td>
+<td class="r data">7</td>
+<td class="r data">24.97933</td>
+<td class="r data">121.53642</td>
+<td class="r data">40.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">8</th>
+<td class="r data">8</td>
+<td class="r data">2013.417</td>
+<td class="r data">20.3</td>
+<td class="r data">287.6025</td>
+<td class="r data">6</td>
+<td class="r data">24.98042</td>
+<td class="r data">121.54228</td>
+<td class="r data">46.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">9</th>
+<td class="r data">9</td>
+<td class="r data">2013.5</td>
+<td class="r data">31.7</td>
+<td class="r data">5512.038</td>
+<td class="r data">1</td>
+<td class="r data">24.95095</td>
+<td class="r data">121.48458</td>
+<td class="r data">18.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">10</th>
+<td class="r data">10</td>
+<td class="r data">2013.417</td>
+<td class="r data">17.9</td>
+<td class="r data">1783.18</td>
+<td class="r data">3</td>
+<td class="r data">24.96731</td>
+<td class="r data">121.51486</td>
+<td class="r data">22.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">11</th>
+<td class="r data">11</td>
+<td class="r data">2013.083</td>
+<td class="r data">34.8</td>
+<td class="r data">405.2134</td>
+<td class="r data">1</td>
+<td class="r data">24.97349</td>
+<td class="r data">121.53372</td>
+<td class="r data">41.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">12</th>
+<td class="r data">12</td>
+<td class="r data">2013.333</td>
+<td class="r data">6.3</td>
+<td class="r data">90.45606</td>
+<td class="r data">9</td>
+<td class="r data">24.97433</td>
+<td class="r data">121.5431</td>
+<td class="r data">58.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">13</th>
+<td class="r data">13</td>
+<td class="r data">2012.917</td>
+<td class="r data">13</td>
+<td class="r data">492.2313</td>
+<td class="r data">5</td>
+<td class="r data">24.96515</td>
+<td class="r data">121.53737</td>
+<td class="r data">39.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">14</th>
+<td class="r data">14</td>
+<td class="r data">2012.667</td>
+<td class="r data">20.4</td>
+<td class="r data">2469.645</td>
+<td class="r data">4</td>
+<td class="r data">24.96108</td>
+<td class="r data">121.51046</td>
+<td class="r data">23.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">15</th>
+<td class="r data">15</td>
+<td class="r data">2013.5</td>
+<td class="r data">13.2</td>
+<td class="r data">1164.838</td>
+<td class="r data">4</td>
+<td class="r data">24.99156</td>
+<td class="r data">121.53406</td>
+<td class="r data">34.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">16</th>
+<td class="r data">16</td>
+<td class="r data">2013.583</td>
+<td class="r data">35.7</td>
+<td class="r data">579.2083</td>
+<td class="r data">2</td>
+<td class="r data">24.9824</td>
+<td class="r data">121.54619</td>
+<td class="r data">50.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">17</th>
+<td class="r data">17</td>
+<td class="r data">2013.25</td>
+<td class="r data">0</td>
+<td class="r data">292.9978</td>
+<td class="r data">6</td>
+<td class="r data">24.97744</td>
+<td class="r data">121.54458</td>
+<td class="r data">70.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">18</th>
+<td class="r data">18</td>
+<td class="r data">2012.75</td>
+<td class="r data">17.7</td>
+<td class="r data">350.8515</td>
+<td class="r data">1</td>
+<td class="r data">24.97544</td>
+<td class="r data">121.53119</td>
+<td class="r data">37.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">19</th>
+<td class="r data">19</td>
+<td class="r data">2013.417</td>
+<td class="r data">16.9</td>
+<td class="r data">368.1363</td>
+<td class="r data">8</td>
+<td class="r data">24.9675</td>
+<td class="r data">121.54451</td>
+<td class="r data">42.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">20</th>
+<td class="r data">20</td>
+<td class="r data">2012.667</td>
+<td class="r data">1.5</td>
+<td class="r data">23.38284</td>
+<td class="r data">7</td>
+<td class="r data">24.96772</td>
+<td class="r data">121.54102</td>
+<td class="r data">47.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">21</th>
+<td class="r data">21</td>
+<td class="r data">2013.417</td>
+<td class="r data">4.5</td>
+<td class="r data">2275.877</td>
+<td class="r data">3</td>
+<td class="r data">24.96314</td>
+<td class="r data">121.51151</td>
+<td class="r data">29.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">22</th>
+<td class="r data">22</td>
+<td class="r data">2013.417</td>
+<td class="r data">10.5</td>
+<td class="r data">279.1726</td>
+<td class="r data">7</td>
+<td class="r data">24.97528</td>
+<td class="r data">121.54541</td>
+<td class="r data">51.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">23</th>
+<td class="r data">23</td>
+<td class="r data">2012.917</td>
+<td class="r data">14.7</td>
+<td class="r data">1360.139</td>
+<td class="r data">1</td>
+<td class="r data">24.95204</td>
+<td class="r data">121.54842</td>
+<td class="r data">24.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">24</th>
+<td class="r data">24</td>
+<td class="r data">2013.083</td>
+<td class="r data">10.1</td>
+<td class="r data">279.1726</td>
+<td class="r data">7</td>
+<td class="r data">24.97528</td>
+<td class="r data">121.54541</td>
+<td class="r data">47.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">25</th>
+<td class="r data">25</td>
+<td class="r data">2013</td>
+<td class="r data">39.6</td>
+<td class="r data">480.6977</td>
+<td class="r data">4</td>
+<td class="r data">24.97353</td>
+<td class="r data">121.53885</td>
+<td class="r data">38.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">26</th>
+<td class="r data">26</td>
+<td class="r data">2013.083</td>
+<td class="r data">29.3</td>
+<td class="r data">1487.868</td>
+<td class="r data">2</td>
+<td class="r data">24.97542</td>
+<td class="r data">121.51726</td>
+<td class="r data">27</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">27</th>
+<td class="r data">27</td>
+<td class="r data">2012.667</td>
+<td class="r data">3.1</td>
+<td class="r data">383.8624</td>
+<td class="r data">5</td>
+<td class="r data">24.98085</td>
+<td class="r data">121.54391</td>
+<td class="r data">56.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">28</th>
+<td class="r data">28</td>
+<td class="r data">2013.25</td>
+<td class="r data">10.4</td>
+<td class="r data">276.449</td>
+<td class="r data">5</td>
+<td class="r data">24.95593</td>
+<td class="r data">121.53913</td>
+<td class="r data">33.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">29</th>
+<td class="r data">29</td>
+<td class="r data">2013.5</td>
+<td class="r data">19.2</td>
+<td class="r data">557.478</td>
+<td class="r data">4</td>
+<td class="r data">24.97419</td>
+<td class="r data">121.53797</td>
+<td class="r data">47</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">30</th>
+<td class="r data">30</td>
+<td class="r data">2013.083</td>
+<td class="r data">7.1</td>
+<td class="r data">451.2438</td>
+<td class="r data">5</td>
+<td class="r data">24.97563</td>
+<td class="r data">121.54694</td>
+<td class="r data">57.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">31</th>
+<td class="r data">31</td>
+<td class="r data">2013.5</td>
+<td class="r data">25.9</td>
+<td class="r data">4519.69</td>
+<td class="r data">0</td>
+<td class="r data">24.94826</td>
+<td class="r data">121.49587</td>
+<td class="r data">22.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">32</th>
+<td class="r data">32</td>
+<td class="r data">2012.75</td>
+<td class="r data">29.6</td>
+<td class="r data">769.4034</td>
+<td class="r data">7</td>
+<td class="r data">24.98281</td>
+<td class="r data">121.53408</td>
+<td class="r data">25</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">33</th>
+<td class="r data">33</td>
+<td class="r data">2012.75</td>
+<td class="r data">37.9</td>
+<td class="r data">488.5727</td>
+<td class="r data">1</td>
+<td class="r data">24.97349</td>
+<td class="r data">121.53451</td>
+<td class="r data">34.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">34</th>
+<td class="r data">34</td>
+<td class="r data">2013.25</td>
+<td class="r data">16.5</td>
+<td class="r data">323.655</td>
+<td class="r data">6</td>
+<td class="r data">24.97841</td>
+<td class="r data">121.54281</td>
+<td class="r data">49.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">35</th>
+<td class="r data">35</td>
+<td class="r data">2012.75</td>
+<td class="r data">15.4</td>
+<td class="r data">205.367</td>
+<td class="r data">7</td>
+<td class="r data">24.98419</td>
+<td class="r data">121.54243</td>
+<td class="r data">55.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">36</th>
+<td class="r data">36</td>
+<td class="r data">2013.5</td>
+<td class="r data">13.9</td>
+<td class="r data">4079.418</td>
+<td class="r data">0</td>
+<td class="r data">25.01459</td>
+<td class="r data">121.51816</td>
+<td class="r data">27.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">37</th>
+<td class="r data">37</td>
+<td class="r data">2012.917</td>
+<td class="r data">14.7</td>
+<td class="r data">1935.009</td>
+<td class="r data">2</td>
+<td class="r data">24.96386</td>
+<td class="r data">121.51458</td>
+<td class="r data">22.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">38</th>
+<td class="r data">38</td>
+<td class="r data">2013.167</td>
+<td class="r data">12</td>
+<td class="r data">1360.139</td>
+<td class="r data">1</td>
+<td class="r data">24.95204</td>
+<td class="r data">121.54842</td>
+<td class="r data">25.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">39</th>
+<td class="r data">39</td>
+<td class="r data">2012.667</td>
+<td class="r data">3.1</td>
+<td class="r data">577.9615</td>
+<td class="r data">6</td>
+<td class="r data">24.97201</td>
+<td class="r data">121.54722</td>
+<td class="r data">47.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">40</th>
+<td class="r data">40</td>
+<td class="r data">2013.167</td>
+<td class="r data">16.2</td>
+<td class="r data">289.3248</td>
+<td class="r data">5</td>
+<td class="r data">24.98203</td>
+<td class="r data">121.54348</td>
+<td class="r data">46.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">41</th>
+<td class="r data">41</td>
+<td class="r data">2013</td>
+<td class="r data">13.6</td>
+<td class="r data">4082.015</td>
+<td class="r data">0</td>
+<td class="r data">24.94155</td>
+<td class="r data">121.50381</td>
+<td class="r data">15.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">42</th>
+<td class="r data">42</td>
+<td class="r data">2013.5</td>
+<td class="r data">16.8</td>
+<td class="r data">4066.587</td>
+<td class="r data">0</td>
+<td class="r data">24.94297</td>
+<td class="r data">121.50342</td>
+<td class="r data">18.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">43</th>
+<td class="r data">43</td>
+<td class="r data">2013.417</td>
+<td class="r data">36.1</td>
+<td class="r data">519.4617</td>
+<td class="r data">5</td>
+<td class="r data">24.96305</td>
+<td class="r data">121.53758</td>
+<td class="r data">34.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">44</th>
+<td class="r data">44</td>
+<td class="r data">2012.75</td>
+<td class="r data">34.4</td>
+<td class="r data">512.7871</td>
+<td class="r data">6</td>
+<td class="r data">24.98748</td>
+<td class="r data">121.54301</td>
+<td class="r data">34.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">45</th>
+<td class="r data">45</td>
+<td class="r data">2013.583</td>
+<td class="r data">2.7</td>
+<td class="r data">533.4762</td>
+<td class="r data">4</td>
+<td class="r data">24.97445</td>
+<td class="r data">121.54765</td>
+<td class="r data">53.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">46</th>
+<td class="r data">46</td>
+<td class="r data">2013.083</td>
+<td class="r data">36.6</td>
+<td class="r data">488.8193</td>
+<td class="r data">8</td>
+<td class="r data">24.97015</td>
+<td class="r data">121.54494</td>
+<td class="r data">38.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">47</th>
+<td class="r data">47</td>
+<td class="r data">2013.417</td>
+<td class="r data">21.7</td>
+<td class="r data">463.9623</td>
+<td class="r data">9</td>
+<td class="r data">24.9703</td>
+<td class="r data">121.54458</td>
+<td class="r data">42</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">48</th>
+<td class="r data">48</td>
+<td class="r data">2013.583</td>
+<td class="r data">35.9</td>
+<td class="r data">640.7391</td>
+<td class="r data">3</td>
+<td class="r data">24.97563</td>
+<td class="r data">121.53715</td>
+<td class="r data">61.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">49</th>
+<td class="r data">49</td>
+<td class="r data">2013.417</td>
+<td class="r data">24.2</td>
+<td class="r data">4605.749</td>
+<td class="r data">0</td>
+<td class="r data">24.94684</td>
+<td class="r data">121.49578</td>
+<td class="r data">13.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">50</th>
+<td class="r data">50</td>
+<td class="r data">2012.667</td>
+<td class="r data">29.4</td>
+<td class="r data">4510.359</td>
+<td class="r data">1</td>
+<td class="r data">24.94925</td>
+<td class="r data">121.49542</td>
+<td class="r data">13.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">51</th>
+<td class="r data">51</td>
+<td class="r data">2013.417</td>
+<td class="r data">21.7</td>
+<td class="r data">512.5487</td>
+<td class="r data">4</td>
+<td class="r data">24.974</td>
+<td class="r data">121.53842</td>
+<td class="r data">44.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">52</th>
+<td class="r data">52</td>
+<td class="r data">2013.083</td>
+<td class="r data">31.3</td>
+<td class="r data">1758.406</td>
+<td class="r data">1</td>
+<td class="r data">24.95402</td>
+<td class="r data">121.55282</td>
+<td class="r data">20.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">53</th>
+<td class="r data">53</td>
+<td class="r data">2013.583</td>
+<td class="r data">32.1</td>
+<td class="r data">1438.579</td>
+<td class="r data">3</td>
+<td class="r data">24.97419</td>
+<td class="r data">121.5175</td>
+<td class="r data">27</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">54</th>
+<td class="r data">54</td>
+<td class="r data">2013.083</td>
+<td class="r data">13.3</td>
+<td class="r data">492.2313</td>
+<td class="r data">5</td>
+<td class="r data">24.96515</td>
+<td class="r data">121.53737</td>
+<td class="r data">38.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">55</th>
+<td class="r data">55</td>
+<td class="r data">2013.083</td>
+<td class="r data">16.1</td>
+<td class="r data">289.3248</td>
+<td class="r data">5</td>
+<td class="r data">24.98203</td>
+<td class="r data">121.54348</td>
+<td class="r data">51.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">56</th>
+<td class="r data">56</td>
+<td class="r data">2012.833</td>
+<td class="r data">31.7</td>
+<td class="r data">1160.632</td>
+<td class="r data">0</td>
+<td class="r data">24.94968</td>
+<td class="r data">121.53009</td>
+<td class="r data">13.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">57</th>
+<td class="r data">57</td>
+<td class="r data">2013.417</td>
+<td class="r data">33.6</td>
+<td class="r data">371.2495</td>
+<td class="r data">8</td>
+<td class="r data">24.97254</td>
+<td class="r data">121.54059</td>
+<td class="r data">41.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">58</th>
+<td class="r data">58</td>
+<td class="r data">2012.917</td>
+<td class="r data">3.5</td>
+<td class="r data">56.47425</td>
+<td class="r data">7</td>
+<td class="r data">24.95744</td>
+<td class="r data">121.53711</td>
+<td class="r data">53.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">59</th>
+<td class="r data">59</td>
+<td class="r data">2013.5</td>
+<td class="r data">30.3</td>
+<td class="r data">4510.359</td>
+<td class="r data">1</td>
+<td class="r data">24.94925</td>
+<td class="r data">121.49542</td>
+<td class="r data">22.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">60</th>
+<td class="r data">60</td>
+<td class="r data">2013.083</td>
+<td class="r data">13.3</td>
+<td class="r data">336.0532</td>
+<td class="r data">5</td>
+<td class="r data">24.95776</td>
+<td class="r data">121.53438</td>
+<td class="r data">42.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">61</th>
+<td class="r data">61</td>
+<td class="r data">2013.417</td>
+<td class="r data">11</td>
+<td class="r data">1931.207</td>
+<td class="r data">2</td>
+<td class="r data">24.96365</td>
+<td class="r data">121.51471</td>
+<td class="r data">21.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">62</th>
+<td class="r data">62</td>
+<td class="r data">2013.5</td>
+<td class="r data">5.3</td>
+<td class="r data">259.6607</td>
+<td class="r data">6</td>
+<td class="r data">24.97585</td>
+<td class="r data">121.54516</td>
+<td class="r data">63.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">63</th>
+<td class="r data">63</td>
+<td class="r data">2012.917</td>
+<td class="r data">17.2</td>
+<td class="r data">2175.877</td>
+<td class="r data">3</td>
+<td class="r data">24.96303</td>
+<td class="r data">121.51254</td>
+<td class="r data">27.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">64</th>
+<td class="r data">64</td>
+<td class="r data">2013.583</td>
+<td class="r data">2.6</td>
+<td class="r data">533.4762</td>
+<td class="r data">4</td>
+<td class="r data">24.97445</td>
+<td class="r data">121.54765</td>
+<td class="r data">55</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">65</th>
+<td class="r data">65</td>
+<td class="r data">2013.333</td>
+<td class="r data">17.5</td>
+<td class="r data">995.7554</td>
+<td class="r data">0</td>
+<td class="r data">24.96305</td>
+<td class="r data">121.54915</td>
+<td class="r data">25.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">66</th>
+<td class="r data">66</td>
+<td class="r data">2013.417</td>
+<td class="r data">40.1</td>
+<td class="r data">123.7429</td>
+<td class="r data">8</td>
+<td class="r data">24.97635</td>
+<td class="r data">121.54329</td>
+<td class="r data">44.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">67</th>
+<td class="r data">67</td>
+<td class="r data">2013</td>
+<td class="r data">1</td>
+<td class="r data">193.5845</td>
+<td class="r data">6</td>
+<td class="r data">24.96571</td>
+<td class="r data">121.54089</td>
+<td class="r data">50.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">68</th>
+<td class="r data">68</td>
+<td class="r data">2013.5</td>
+<td class="r data">8.5</td>
+<td class="r data">104.8101</td>
+<td class="r data">5</td>
+<td class="r data">24.96674</td>
+<td class="r data">121.54067</td>
+<td class="r data">56.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">69</th>
+<td class="r data">69</td>
+<td class="r data">2013.417</td>
+<td class="r data">30.4</td>
+<td class="r data">464.223</td>
+<td class="r data">6</td>
+<td class="r data">24.97964</td>
+<td class="r data">121.53805</td>
+<td class="r data">36.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">70</th>
+<td class="r data">70</td>
+<td class="r data">2012.833</td>
+<td class="r data">12.5</td>
+<td class="r data">561.9845</td>
+<td class="r data">5</td>
+<td class="r data">24.98746</td>
+<td class="r data">121.54391</td>
+<td class="r data">42</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">71</th>
+<td class="r data">71</td>
+<td class="r data">2013.583</td>
+<td class="r data">6.6</td>
+<td class="r data">90.45606</td>
+<td class="r data">9</td>
+<td class="r data">24.97433</td>
+<td class="r data">121.5431</td>
+<td class="r data">59</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">72</th>
+<td class="r data">72</td>
+<td class="r data">2013.083</td>
+<td class="r data">35.5</td>
+<td class="r data">640.7391</td>
+<td class="r data">3</td>
+<td class="r data">24.97563</td>
+<td class="r data">121.53715</td>
+<td class="r data">40.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">73</th>
+<td class="r data">73</td>
+<td class="r data">2013.583</td>
+<td class="r data">32.5</td>
+<td class="r data">424.5442</td>
+<td class="r data">8</td>
+<td class="r data">24.97587</td>
+<td class="r data">121.53913</td>
+<td class="r data">36.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">74</th>
+<td class="r data">74</td>
+<td class="r data">2013.167</td>
+<td class="r data">13.8</td>
+<td class="r data">4082.015</td>
+<td class="r data">0</td>
+<td class="r data">24.94155</td>
+<td class="r data">121.50381</td>
+<td class="r data">20</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">75</th>
+<td class="r data">75</td>
+<td class="r data">2012.917</td>
+<td class="r data">6.8</td>
+<td class="r data">379.5575</td>
+<td class="r data">10</td>
+<td class="r data">24.98343</td>
+<td class="r data">121.53762</td>
+<td class="r data">54.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">76</th>
+<td class="r data">76</td>
+<td class="r data">2013.5</td>
+<td class="r data">12.3</td>
+<td class="r data">1360.139</td>
+<td class="r data">1</td>
+<td class="r data">24.95204</td>
+<td class="r data">121.54842</td>
+<td class="r data">29.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">77</th>
+<td class="r data">77</td>
+<td class="r data">2013.583</td>
+<td class="r data">35.9</td>
+<td class="r data">616.4004</td>
+<td class="r data">3</td>
+<td class="r data">24.97723</td>
+<td class="r data">121.53767</td>
+<td class="r data">36.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">78</th>
+<td class="r data">78</td>
+<td class="r data">2012.833</td>
+<td class="r data">20.5</td>
+<td class="r data">2185.128</td>
+<td class="r data">3</td>
+<td class="r data">24.96322</td>
+<td class="r data">121.51237</td>
+<td class="r data">25.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">79</th>
+<td class="r data">79</td>
+<td class="r data">2012.917</td>
+<td class="r data">38.2</td>
+<td class="r data">552.4371</td>
+<td class="r data">2</td>
+<td class="r data">24.97598</td>
+<td class="r data">121.53381</td>
+<td class="r data">29.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">80</th>
+<td class="r data">80</td>
+<td class="r data">2013</td>
+<td class="r data">18</td>
+<td class="r data">1414.837</td>
+<td class="r data">1</td>
+<td class="r data">24.95182</td>
+<td class="r data">121.54887</td>
+<td class="r data">26.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">81</th>
+<td class="r data">81</td>
+<td class="r data">2013.5</td>
+<td class="r data">11.8</td>
+<td class="r data">533.4762</td>
+<td class="r data">4</td>
+<td class="r data">24.97445</td>
+<td class="r data">121.54765</td>
+<td class="r data">40.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">82</th>
+<td class="r data">82</td>
+<td class="r data">2013</td>
+<td class="r data">30.8</td>
+<td class="r data">377.7956</td>
+<td class="r data">6</td>
+<td class="r data">24.96427</td>
+<td class="r data">121.53964</td>
+<td class="r data">36.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">83</th>
+<td class="r data">83</td>
+<td class="r data">2013.083</td>
+<td class="r data">13.2</td>
+<td class="r data">150.9347</td>
+<td class="r data">7</td>
+<td class="r data">24.96725</td>
+<td class="r data">121.54252</td>
+<td class="r data">48.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">84</th>
+<td class="r data">84</td>
+<td class="r data">2012.917</td>
+<td class="r data">25.3</td>
+<td class="r data">2707.392</td>
+<td class="r data">3</td>
+<td class="r data">24.96056</td>
+<td class="r data">121.50831</td>
+<td class="r data">17.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">85</th>
+<td class="r data">85</td>
+<td class="r data">2013.083</td>
+<td class="r data">15.1</td>
+<td class="r data">383.2805</td>
+<td class="r data">7</td>
+<td class="r data">24.96735</td>
+<td class="r data">121.54464</td>
+<td class="r data">43.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">86</th>
+<td class="r data">86</td>
+<td class="r data">2012.75</td>
+<td class="r data">0</td>
+<td class="r data">338.9679</td>
+<td class="r data">9</td>
+<td class="r data">24.96853</td>
+<td class="r data">121.54413</td>
+<td class="r data">50.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">87</th>
+<td class="r data">87</td>
+<td class="r data">2012.833</td>
+<td class="r data">1.8</td>
+<td class="r data">1455.798</td>
+<td class="r data">1</td>
+<td class="r data">24.9512</td>
+<td class="r data">121.549</td>
+<td class="r data">27</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">88</th>
+<td class="r data">88</td>
+<td class="r data">2013.583</td>
+<td class="r data">16.9</td>
+<td class="r data">4066.587</td>
+<td class="r data">0</td>
+<td class="r data">24.94297</td>
+<td class="r data">121.50342</td>
+<td class="r data">18.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">89</th>
+<td class="r data">89</td>
+<td class="r data">2012.917</td>
+<td class="r data">8.9</td>
+<td class="r data">1406.43</td>
+<td class="r data">0</td>
+<td class="r data">24.98573</td>
+<td class="r data">121.52758</td>
+<td class="r data">48</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">90</th>
+<td class="r data">90</td>
+<td class="r data">2013.5</td>
+<td class="r data">23</td>
+<td class="r data">3947.945</td>
+<td class="r data">0</td>
+<td class="r data">24.94783</td>
+<td class="r data">121.50243</td>
+<td class="r data">25.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">91</th>
+<td class="r data">91</td>
+<td class="r data">2012.833</td>
+<td class="r data">0</td>
+<td class="r data">274.0144</td>
+<td class="r data">1</td>
+<td class="r data">24.9748</td>
+<td class="r data">121.53059</td>
+<td class="r data">45.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">92</th>
+<td class="r data">92</td>
+<td class="r data">2013.25</td>
+<td class="r data">9.1</td>
+<td class="r data">1402.016</td>
+<td class="r data">0</td>
+<td class="r data">24.98569</td>
+<td class="r data">121.5276</td>
+<td class="r data">43.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">93</th>
+<td class="r data">93</td>
+<td class="r data">2012.917</td>
+<td class="r data">20.6</td>
+<td class="r data">2469.645</td>
+<td class="r data">4</td>
+<td class="r data">24.96108</td>
+<td class="r data">121.51046</td>
+<td class="r data">21.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">94</th>
+<td class="r data">94</td>
+<td class="r data">2012.917</td>
+<td class="r data">31.9</td>
+<td class="r data">1146.329</td>
+<td class="r data">0</td>
+<td class="r data">24.9492</td>
+<td class="r data">121.53076</td>
+<td class="r data">16.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">95</th>
+<td class="r data">95</td>
+<td class="r data">2012.917</td>
+<td class="r data">40.9</td>
+<td class="r data">167.5989</td>
+<td class="r data">5</td>
+<td class="r data">24.9663</td>
+<td class="r data">121.54026</td>
+<td class="r data">41</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">96</th>
+<td class="r data">96</td>
+<td class="r data">2012.917</td>
+<td class="r data">8</td>
+<td class="r data">104.8101</td>
+<td class="r data">5</td>
+<td class="r data">24.96674</td>
+<td class="r data">121.54067</td>
+<td class="r data">51.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">97</th>
+<td class="r data">97</td>
+<td class="r data">2013.417</td>
+<td class="r data">6.4</td>
+<td class="r data">90.45606</td>
+<td class="r data">9</td>
+<td class="r data">24.97433</td>
+<td class="r data">121.5431</td>
+<td class="r data">59.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">98</th>
+<td class="r data">98</td>
+<td class="r data">2013.083</td>
+<td class="r data">28.4</td>
+<td class="r data">617.4424</td>
+<td class="r data">3</td>
+<td class="r data">24.97746</td>
+<td class="r data">121.53299</td>
+<td class="r data">34.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">99</th>
+<td class="r data">99</td>
+<td class="r data">2013.417</td>
+<td class="r data">16.4</td>
+<td class="r data">289.3248</td>
+<td class="r data">5</td>
+<td class="r data">24.98203</td>
+<td class="r data">121.54348</td>
+<td class="r data">51</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">100</th>
+<td class="r data">100</td>
+<td class="r data">2013.417</td>
+<td class="r data">6.4</td>
+<td class="r data">90.45606</td>
+<td class="r data">9</td>
+<td class="r data">24.97433</td>
+<td class="r data">121.5431</td>
+<td class="r data">62.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">101</th>
+<td class="r data">101</td>
+<td class="r data">2013.5</td>
+<td class="r data">17.5</td>
+<td class="r data">964.7496</td>
+<td class="r data">4</td>
+<td class="r data">24.98872</td>
+<td class="r data">121.53411</td>
+<td class="r data">38.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">102</th>
+<td class="r data">102</td>
+<td class="r data">2012.833</td>
+<td class="r data">12.7</td>
+<td class="r data">170.1289</td>
+<td class="r data">1</td>
+<td class="r data">24.97371</td>
+<td class="r data">121.52984</td>
+<td class="r data">32.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">103</th>
+<td class="r data">103</td>
+<td class="r data">2013.083</td>
+<td class="r data">1.1</td>
+<td class="r data">193.5845</td>
+<td class="r data">6</td>
+<td class="r data">24.96571</td>
+<td class="r data">121.54089</td>
+<td class="r data">54.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">104</th>
+<td class="r data">104</td>
+<td class="r data">2012.75</td>
+<td class="r data">0</td>
+<td class="r data">208.3905</td>
+<td class="r data">6</td>
+<td class="r data">24.95618</td>
+<td class="r data">121.53844</td>
+<td class="r data">45.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">105</th>
+<td class="r data">105</td>
+<td class="r data">2012.667</td>
+<td class="r data">32.7</td>
+<td class="r data">392.4459</td>
+<td class="r data">6</td>
+<td class="r data">24.96398</td>
+<td class="r data">121.5425</td>
+<td class="r data">30.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">106</th>
+<td class="r data">106</td>
+<td class="r data">2012.833</td>
+<td class="r data">0</td>
+<td class="r data">292.9978</td>
+<td class="r data">6</td>
+<td class="r data">24.97744</td>
+<td class="r data">121.54458</td>
+<td class="r data">71</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">107</th>
+<td class="r data">107</td>
+<td class="r data">2013.083</td>
+<td class="r data">17.2</td>
+<td class="r data">189.5181</td>
+<td class="r data">8</td>
+<td class="r data">24.97707</td>
+<td class="r data">121.54308</td>
+<td class="r data">47.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">108</th>
+<td class="r data">108</td>
+<td class="r data">2013.333</td>
+<td class="r data">12.2</td>
+<td class="r data">1360.139</td>
+<td class="r data">1</td>
+<td class="r data">24.95204</td>
+<td class="r data">121.54842</td>
+<td class="r data">26.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">109</th>
+<td class="r data">109</td>
+<td class="r data">2013.417</td>
+<td class="r data">31.4</td>
+<td class="r data">592.5006</td>
+<td class="r data">2</td>
+<td class="r data">24.9726</td>
+<td class="r data">121.53561</td>
+<td class="r data">34.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">110</th>
+<td class="r data">110</td>
+<td class="r data">2013.583</td>
+<td class="r data">4</td>
+<td class="r data">2147.376</td>
+<td class="r data">3</td>
+<td class="r data">24.96299</td>
+<td class="r data">121.51284</td>
+<td class="r data">28.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">111</th>
+<td class="r data">111</td>
+<td class="r data">2013.083</td>
+<td class="r data">8.1</td>
+<td class="r data">104.8101</td>
+<td class="r data">5</td>
+<td class="r data">24.96674</td>
+<td class="r data">121.54067</td>
+<td class="r data">51.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">112</th>
+<td class="r data">112</td>
+<td class="r data">2013.583</td>
+<td class="r data">33.3</td>
+<td class="r data">196.6172</td>
+<td class="r data">7</td>
+<td class="r data">24.97701</td>
+<td class="r data">121.54224</td>
+<td class="r data">39.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">113</th>
+<td class="r data">113</td>
+<td class="r data">2013.417</td>
+<td class="r data">9.9</td>
+<td class="r data">2102.427</td>
+<td class="r data">3</td>
+<td class="r data">24.96044</td>
+<td class="r data">121.51462</td>
+<td class="r data">23.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">114</th>
+<td class="r data">114</td>
+<td class="r data">2013.333</td>
+<td class="r data">14.8</td>
+<td class="r data">393.2606</td>
+<td class="r data">6</td>
+<td class="r data">24.96172</td>
+<td class="r data">121.53812</td>
+<td class="r data">7.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">115</th>
+<td class="r data">115</td>
+<td class="r data">2012.667</td>
+<td class="r data">30.6</td>
+<td class="r data">143.8383</td>
+<td class="r data">8</td>
+<td class="r data">24.98155</td>
+<td class="r data">121.54142</td>
+<td class="r data">53.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">116</th>
+<td class="r data">116</td>
+<td class="r data">2013.083</td>
+<td class="r data">20.6</td>
+<td class="r data">737.9161</td>
+<td class="r data">2</td>
+<td class="r data">24.98092</td>
+<td class="r data">121.54739</td>
+<td class="r data">46.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">117</th>
+<td class="r data">117</td>
+<td class="r data">2013</td>
+<td class="r data">30.9</td>
+<td class="r data">6396.283</td>
+<td class="r data">1</td>
+<td class="r data">24.94375</td>
+<td class="r data">121.47883</td>
+<td class="r data">12.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">118</th>
+<td class="r data">118</td>
+<td class="r data">2013</td>
+<td class="r data">13.6</td>
+<td class="r data">4197.349</td>
+<td class="r data">0</td>
+<td class="r data">24.93885</td>
+<td class="r data">121.50383</td>
+<td class="r data">13</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">119</th>
+<td class="r data">119</td>
+<td class="r data">2013.5</td>
+<td class="r data">25.3</td>
+<td class="r data">1583.722</td>
+<td class="r data">3</td>
+<td class="r data">24.96622</td>
+<td class="r data">121.51709</td>
+<td class="r data">30.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">120</th>
+<td class="r data">120</td>
+<td class="r data">2013.5</td>
+<td class="r data">16.6</td>
+<td class="r data">289.3248</td>
+<td class="r data">5</td>
+<td class="r data">24.98203</td>
+<td class="r data">121.54348</td>
+<td class="r data">59.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">121</th>
+<td class="r data">121</td>
+<td class="r data">2013.167</td>
+<td class="r data">13.3</td>
+<td class="r data">492.2313</td>
+<td class="r data">5</td>
+<td class="r data">24.96515</td>
+<td class="r data">121.53737</td>
+<td class="r data">31.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">122</th>
+<td class="r data">122</td>
+<td class="r data">2013.5</td>
+<td class="r data">13.6</td>
+<td class="r data">492.2313</td>
+<td class="r data">5</td>
+<td class="r data">24.96515</td>
+<td class="r data">121.53737</td>
+<td class="r data">48</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">123</th>
+<td class="r data">123</td>
+<td class="r data">2013.25</td>
+<td class="r data">31.5</td>
+<td class="r data">414.9476</td>
+<td class="r data">4</td>
+<td class="r data">24.98199</td>
+<td class="r data">121.54464</td>
+<td class="r data">32.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">124</th>
+<td class="r data">124</td>
+<td class="r data">2013.417</td>
+<td class="r data">0</td>
+<td class="r data">185.4296</td>
+<td class="r data">0</td>
+<td class="r data">24.9711</td>
+<td class="r data">121.5317</td>
+<td class="r data">45.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">125</th>
+<td class="r data">125</td>
+<td class="r data">2012.917</td>
+<td class="r data">9.9</td>
+<td class="r data">279.1726</td>
+<td class="r data">7</td>
+<td class="r data">24.97528</td>
+<td class="r data">121.54541</td>
+<td class="r data">57.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">126</th>
+<td class="r data">126</td>
+<td class="r data">2013.167</td>
+<td class="r data">1.1</td>
+<td class="r data">193.5845</td>
+<td class="r data">6</td>
+<td class="r data">24.96571</td>
+<td class="r data">121.54089</td>
+<td class="r data">48.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">127</th>
+<td class="r data">127</td>
+<td class="r data">2013.083</td>
+<td class="r data">38.6</td>
+<td class="r data">804.6897</td>
+<td class="r data">4</td>
+<td class="r data">24.97838</td>
+<td class="r data">121.53477</td>
+<td class="r data">62.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">128</th>
+<td class="r data">128</td>
+<td class="r data">2013.25</td>
+<td class="r data">3.8</td>
+<td class="r data">383.8624</td>
+<td class="r data">5</td>
+<td class="r data">24.98085</td>
+<td class="r data">121.54391</td>
+<td class="r data">55</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">129</th>
+<td class="r data">129</td>
+<td class="r data">2013.083</td>
+<td class="r data">41.3</td>
+<td class="r data">124.9912</td>
+<td class="r data">6</td>
+<td class="r data">24.96674</td>
+<td class="r data">121.54039</td>
+<td class="r data">60.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">130</th>
+<td class="r data">130</td>
+<td class="r data">2013.417</td>
+<td class="r data">38.5</td>
+<td class="r data">216.8329</td>
+<td class="r data">7</td>
+<td class="r data">24.98086</td>
+<td class="r data">121.54162</td>
+<td class="r data">41</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">131</th>
+<td class="r data">131</td>
+<td class="r data">2013.25</td>
+<td class="r data">29.6</td>
+<td class="r data">535.527</td>
+<td class="r data">8</td>
+<td class="r data">24.98092</td>
+<td class="r data">121.53653</td>
+<td class="r data">37.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">132</th>
+<td class="r data">132</td>
+<td class="r data">2013.5</td>
+<td class="r data">4</td>
+<td class="r data">2147.376</td>
+<td class="r data">3</td>
+<td class="r data">24.96299</td>
+<td class="r data">121.51284</td>
+<td class="r data">30.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">133</th>
+<td class="r data">133</td>
+<td class="r data">2013.167</td>
+<td class="r data">26.6</td>
+<td class="r data">482.7581</td>
+<td class="r data">5</td>
+<td class="r data">24.97433</td>
+<td class="r data">121.53863</td>
+<td class="r data">37.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">134</th>
+<td class="r data">134</td>
+<td class="r data">2012.833</td>
+<td class="r data">18</td>
+<td class="r data">373.3937</td>
+<td class="r data">8</td>
+<td class="r data">24.9866</td>
+<td class="r data">121.54082</td>
+<td class="r data">39.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">135</th>
+<td class="r data">135</td>
+<td class="r data">2012.667</td>
+<td class="r data">33.4</td>
+<td class="r data">186.9686</td>
+<td class="r data">6</td>
+<td class="r data">24.96604</td>
+<td class="r data">121.54211</td>
+<td class="r data">42.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">136</th>
+<td class="r data">136</td>
+<td class="r data">2012.917</td>
+<td class="r data">18.9</td>
+<td class="r data">1009.235</td>
+<td class="r data">0</td>
+<td class="r data">24.96357</td>
+<td class="r data">121.54951</td>
+<td class="r data">20.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">137</th>
+<td class="r data">137</td>
+<td class="r data">2012.75</td>
+<td class="r data">11.4</td>
+<td class="r data">390.5684</td>
+<td class="r data">5</td>
+<td class="r data">24.97937</td>
+<td class="r data">121.54245</td>
+<td class="r data">46.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">138</th>
+<td class="r data">138</td>
+<td class="r data">2013.5</td>
+<td class="r data">13.6</td>
+<td class="r data">319.0708</td>
+<td class="r data">6</td>
+<td class="r data">24.96495</td>
+<td class="r data">121.54277</td>
+<td class="r data">47.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">139</th>
+<td class="r data">139</td>
+<td class="r data">2013.167</td>
+<td class="r data">10</td>
+<td class="r data">942.4664</td>
+<td class="r data">0</td>
+<td class="r data">24.97843</td>
+<td class="r data">121.52406</td>
+<td class="r data">43.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">140</th>
+<td class="r data">140</td>
+<td class="r data">2012.667</td>
+<td class="r data">12.9</td>
+<td class="r data">492.2313</td>
+<td class="r data">5</td>
+<td class="r data">24.96515</td>
+<td class="r data">121.53737</td>
+<td class="r data">42.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">141</th>
+<td class="r data">141</td>
+<td class="r data">2013.25</td>
+<td class="r data">16.2</td>
+<td class="r data">289.3248</td>
+<td class="r data">5</td>
+<td class="r data">24.98203</td>
+<td class="r data">121.54348</td>
+<td class="r data">51.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">142</th>
+<td class="r data">142</td>
+<td class="r data">2013.333</td>
+<td class="r data">5.1</td>
+<td class="r data">1559.827</td>
+<td class="r data">3</td>
+<td class="r data">24.97213</td>
+<td class="r data">121.51627</td>
+<td class="r data">28.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">143</th>
+<td class="r data">143</td>
+<td class="r data">2013.417</td>
+<td class="r data">19.8</td>
+<td class="r data">640.6071</td>
+<td class="r data">5</td>
+<td class="r data">24.97017</td>
+<td class="r data">121.54647</td>
+<td class="r data">37.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">144</th>
+<td class="r data">144</td>
+<td class="r data">2013.5</td>
+<td class="r data">13.6</td>
+<td class="r data">492.2313</td>
+<td class="r data">5</td>
+<td class="r data">24.96515</td>
+<td class="r data">121.53737</td>
+<td class="r data">40.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">145</th>
+<td class="r data">145</td>
+<td class="r data">2013.083</td>
+<td class="r data">11.9</td>
+<td class="r data">1360.139</td>
+<td class="r data">1</td>
+<td class="r data">24.95204</td>
+<td class="r data">121.54842</td>
+<td class="r data">28.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">146</th>
+<td class="r data">146</td>
+<td class="r data">2012.917</td>
+<td class="r data">2.1</td>
+<td class="r data">451.2438</td>
+<td class="r data">5</td>
+<td class="r data">24.97563</td>
+<td class="r data">121.54694</td>
+<td class="r data">45.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">147</th>
+<td class="r data">147</td>
+<td class="r data">2012.75</td>
+<td class="r data">0</td>
+<td class="r data">185.4296</td>
+<td class="r data">0</td>
+<td class="r data">24.9711</td>
+<td class="r data">121.5317</td>
+<td class="r data">52.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">148</th>
+<td class="r data">148</td>
+<td class="r data">2012.75</td>
+<td class="r data">3.2</td>
+<td class="r data">489.8821</td>
+<td class="r data">8</td>
+<td class="r data">24.97017</td>
+<td class="r data">121.54494</td>
+<td class="r data">43.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">149</th>
+<td class="r data">149</td>
+<td class="r data">2013.5</td>
+<td class="r data">16.4</td>
+<td class="r data">3780.59</td>
+<td class="r data">0</td>
+<td class="r data">24.93293</td>
+<td class="r data">121.51203</td>
+<td class="r data">45.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">150</th>
+<td class="r data">150</td>
+<td class="r data">2012.667</td>
+<td class="r data">34.9</td>
+<td class="r data">179.4538</td>
+<td class="r data">8</td>
+<td class="r data">24.97349</td>
+<td class="r data">121.54245</td>
+<td class="r data">39.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">151</th>
+<td class="r data">151</td>
+<td class="r data">2013.25</td>
+<td class="r data">35.8</td>
+<td class="r data">170.7311</td>
+<td class="r data">7</td>
+<td class="r data">24.96719</td>
+<td class="r data">121.54269</td>
+<td class="r data">48.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">152</th>
+<td class="r data">152</td>
+<td class="r data">2013.5</td>
+<td class="r data">4.9</td>
+<td class="r data">387.7721</td>
+<td class="r data">9</td>
+<td class="r data">24.98118</td>
+<td class="r data">121.53788</td>
+<td class="r data">44.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">153</th>
+<td class="r data">153</td>
+<td class="r data">2013.333</td>
+<td class="r data">12</td>
+<td class="r data">1360.139</td>
+<td class="r data">1</td>
+<td class="r data">24.95204</td>
+<td class="r data">121.54842</td>
+<td class="r data">28.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">154</th>
+<td class="r data">154</td>
+<td class="r data">2013.25</td>
+<td class="r data">6.5</td>
+<td class="r data">376.1709</td>
+<td class="r data">6</td>
+<td class="r data">24.95418</td>
+<td class="r data">121.53713</td>
+<td class="r data">40.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">155</th>
+<td class="r data">155</td>
+<td class="r data">2013.5</td>
+<td class="r data">16.9</td>
+<td class="r data">4066.587</td>
+<td class="r data">0</td>
+<td class="r data">24.94297</td>
+<td class="r data">121.50342</td>
+<td class="r data">20.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">156</th>
+<td class="r data">156</td>
+<td class="r data">2013.167</td>
+<td class="r data">13.8</td>
+<td class="r data">4082.015</td>
+<td class="r data">0</td>
+<td class="r data">24.94155</td>
+<td class="r data">121.50381</td>
+<td class="r data">15.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">157</th>
+<td class="r data">157</td>
+<td class="r data">2013.583</td>
+<td class="r data">30.7</td>
+<td class="r data">1264.73</td>
+<td class="r data">0</td>
+<td class="r data">24.94883</td>
+<td class="r data">121.52954</td>
+<td class="r data">18.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">158</th>
+<td class="r data">158</td>
+<td class="r data">2013.25</td>
+<td class="r data">16.1</td>
+<td class="r data">815.9314</td>
+<td class="r data">4</td>
+<td class="r data">24.97886</td>
+<td class="r data">121.53464</td>
+<td class="r data">35.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">159</th>
+<td class="r data">159</td>
+<td class="r data">2013</td>
+<td class="r data">11.6</td>
+<td class="r data">390.5684</td>
+<td class="r data">5</td>
+<td class="r data">24.97937</td>
+<td class="r data">121.54245</td>
+<td class="r data">39.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">160</th>
+<td class="r data">160</td>
+<td class="r data">2012.667</td>
+<td class="r data">15.5</td>
+<td class="r data">815.9314</td>
+<td class="r data">4</td>
+<td class="r data">24.97886</td>
+<td class="r data">121.53464</td>
+<td class="r data">37.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">161</th>
+<td class="r data">161</td>
+<td class="r data">2012.917</td>
+<td class="r data">3.5</td>
+<td class="r data">49.66105</td>
+<td class="r data">8</td>
+<td class="r data">24.95836</td>
+<td class="r data">121.53756</td>
+<td class="r data">57.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">162</th>
+<td class="r data">162</td>
+<td class="r data">2013.417</td>
+<td class="r data">19.2</td>
+<td class="r data">616.4004</td>
+<td class="r data">3</td>
+<td class="r data">24.97723</td>
+<td class="r data">121.53767</td>
+<td class="r data">39.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">163</th>
+<td class="r data">163</td>
+<td class="r data">2012.75</td>
+<td class="r data">16</td>
+<td class="r data">4066.587</td>
+<td class="r data">0</td>
+<td class="r data">24.94297</td>
+<td class="r data">121.50342</td>
+<td class="r data">11.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">164</th>
+<td class="r data">164</td>
+<td class="r data">2013.5</td>
+<td class="r data">8.5</td>
+<td class="r data">104.8101</td>
+<td class="r data">5</td>
+<td class="r data">24.96674</td>
+<td class="r data">121.54067</td>
+<td class="r data">55.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">165</th>
+<td class="r data">165</td>
+<td class="r data">2012.833</td>
+<td class="r data">0</td>
+<td class="r data">185.4296</td>
+<td class="r data">0</td>
+<td class="r data">24.9711</td>
+<td class="r data">121.5317</td>
+<td class="r data">55.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">166</th>
+<td class="r data">166</td>
+<td class="r data">2012.917</td>
+<td class="r data">13.7</td>
+<td class="r data">1236.564</td>
+<td class="r data">1</td>
+<td class="r data">24.97694</td>
+<td class="r data">121.55391</td>
+<td class="r data">30.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">167</th>
+<td class="r data">167</td>
+<td class="r data">2013.417</td>
+<td class="r data">0</td>
+<td class="r data">292.9978</td>
+<td class="r data">6</td>
+<td class="r data">24.97744</td>
+<td class="r data">121.54458</td>
+<td class="r data">73.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">168</th>
+<td class="r data">168</td>
+<td class="r data">2013.417</td>
+<td class="r data">28.2</td>
+<td class="r data">330.0854</td>
+<td class="r data">8</td>
+<td class="r data">24.97408</td>
+<td class="r data">121.54011</td>
+<td class="r data">43.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">169</th>
+<td class="r data">169</td>
+<td class="r data">2013.083</td>
+<td class="r data">27.6</td>
+<td class="r data">515.1122</td>
+<td class="r data">5</td>
+<td class="r data">24.96299</td>
+<td class="r data">121.5432</td>
+<td class="r data">37.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">170</th>
+<td class="r data">170</td>
+<td class="r data">2013.417</td>
+<td class="r data">8.4</td>
+<td class="r data">1962.628</td>
+<td class="r data">1</td>
+<td class="r data">24.95468</td>
+<td class="r data">121.55481</td>
+<td class="r data">23.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">171</th>
+<td class="r data">171</td>
+<td class="r data">2013.333</td>
+<td class="r data">24</td>
+<td class="r data">4527.687</td>
+<td class="r data">0</td>
+<td class="r data">24.94741</td>
+<td class="r data">121.49628</td>
+<td class="r data">14.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">172</th>
+<td class="r data">172</td>
+<td class="r data">2013.083</td>
+<td class="r data">3.6</td>
+<td class="r data">383.8624</td>
+<td class="r data">5</td>
+<td class="r data">24.98085</td>
+<td class="r data">121.54391</td>
+<td class="r data">58.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">173</th>
+<td class="r data">173</td>
+<td class="r data">2013.583</td>
+<td class="r data">6.6</td>
+<td class="r data">90.45606</td>
+<td class="r data">9</td>
+<td class="r data">24.97433</td>
+<td class="r data">121.5431</td>
+<td class="r data">58.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">174</th>
+<td class="r data">174</td>
+<td class="r data">2013.083</td>
+<td class="r data">41.3</td>
+<td class="r data">401.8807</td>
+<td class="r data">4</td>
+<td class="r data">24.98326</td>
+<td class="r data">121.5446</td>
+<td class="r data">35.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">175</th>
+<td class="r data">175</td>
+<td class="r data">2013.417</td>
+<td class="r data">4.3</td>
+<td class="r data">432.0385</td>
+<td class="r data">7</td>
+<td class="r data">24.9805</td>
+<td class="r data">121.53778</td>
+<td class="r data">45.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">176</th>
+<td class="r data">176</td>
+<td class="r data">2013.083</td>
+<td class="r data">30.2</td>
+<td class="r data">472.1745</td>
+<td class="r data">3</td>
+<td class="r data">24.97005</td>
+<td class="r data">121.53758</td>
+<td class="r data">36.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">177</th>
+<td class="r data">177</td>
+<td class="r data">2012.833</td>
+<td class="r data">13.9</td>
+<td class="r data">4573.779</td>
+<td class="r data">0</td>
+<td class="r data">24.94867</td>
+<td class="r data">121.49507</td>
+<td class="r data">19.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">178</th>
+<td class="r data">178</td>
+<td class="r data">2013.083</td>
+<td class="r data">33</td>
+<td class="r data">181.0766</td>
+<td class="r data">9</td>
+<td class="r data">24.97697</td>
+<td class="r data">121.54262</td>
+<td class="r data">42</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">179</th>
+<td class="r data">179</td>
+<td class="r data">2013.5</td>
+<td class="r data">13.1</td>
+<td class="r data">1144.436</td>
+<td class="r data">4</td>
+<td class="r data">24.99176</td>
+<td class="r data">121.53456</td>
+<td class="r data">36.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">180</th>
+<td class="r data">180</td>
+<td class="r data">2013.083</td>
+<td class="r data">14</td>
+<td class="r data">438.8513</td>
+<td class="r data">1</td>
+<td class="r data">24.97493</td>
+<td class="r data">121.5273</td>
+<td class="r data">42.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">181</th>
+<td class="r data">181</td>
+<td class="r data">2012.667</td>
+<td class="r data">26.9</td>
+<td class="r data">4449.27</td>
+<td class="r data">0</td>
+<td class="r data">24.94898</td>
+<td class="r data">121.49621</td>
+<td class="r data">15.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">182</th>
+<td class="r data">182</td>
+<td class="r data">2013.167</td>
+<td class="r data">11.6</td>
+<td class="r data">201.8939</td>
+<td class="r data">8</td>
+<td class="r data">24.98489</td>
+<td class="r data">121.54121</td>
+<td class="r data">55.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">183</th>
+<td class="r data">183</td>
+<td class="r data">2013.5</td>
+<td class="r data">13.5</td>
+<td class="r data">2147.376</td>
+<td class="r data">3</td>
+<td class="r data">24.96299</td>
+<td class="r data">121.51284</td>
+<td class="r data">23.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">184</th>
+<td class="r data">184</td>
+<td class="r data">2013.5</td>
+<td class="r data">17</td>
+<td class="r data">4082.015</td>
+<td class="r data">0</td>
+<td class="r data">24.94155</td>
+<td class="r data">121.50381</td>
+<td class="r data">18.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">185</th>
+<td class="r data">185</td>
+<td class="r data">2012.75</td>
+<td class="r data">14.1</td>
+<td class="r data">2615.465</td>
+<td class="r data">0</td>
+<td class="r data">24.95495</td>
+<td class="r data">121.56174</td>
+<td class="r data">21.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">186</th>
+<td class="r data">186</td>
+<td class="r data">2012.75</td>
+<td class="r data">31.4</td>
+<td class="r data">1447.286</td>
+<td class="r data">3</td>
+<td class="r data">24.97285</td>
+<td class="r data">121.5173</td>
+<td class="r data">21.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">187</th>
+<td class="r data">187</td>
+<td class="r data">2013.167</td>
+<td class="r data">20.9</td>
+<td class="r data">2185.128</td>
+<td class="r data">3</td>
+<td class="r data">24.96322</td>
+<td class="r data">121.51237</td>
+<td class="r data">25.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">188</th>
+<td class="r data">188</td>
+<td class="r data">2013</td>
+<td class="r data">8.9</td>
+<td class="r data">3078.176</td>
+<td class="r data">0</td>
+<td class="r data">24.95464</td>
+<td class="r data">121.56627</td>
+<td class="r data">22</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">189</th>
+<td class="r data">189</td>
+<td class="r data">2012.917</td>
+<td class="r data">34.8</td>
+<td class="r data">190.0392</td>
+<td class="r data">8</td>
+<td class="r data">24.97707</td>
+<td class="r data">121.54312</td>
+<td class="r data">44.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">190</th>
+<td class="r data">190</td>
+<td class="r data">2012.917</td>
+<td class="r data">16.3</td>
+<td class="r data">4066.587</td>
+<td class="r data">0</td>
+<td class="r data">24.94297</td>
+<td class="r data">121.50342</td>
+<td class="r data">20.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">191</th>
+<td class="r data">191</td>
+<td class="r data">2013.5</td>
+<td class="r data">35.3</td>
+<td class="r data">616.5735</td>
+<td class="r data">8</td>
+<td class="r data">24.97945</td>
+<td class="r data">121.53642</td>
+<td class="r data">42.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">192</th>
+<td class="r data">192</td>
+<td class="r data">2013.167</td>
+<td class="r data">13.2</td>
+<td class="r data">750.0704</td>
+<td class="r data">2</td>
+<td class="r data">24.97371</td>
+<td class="r data">121.54951</td>
+<td class="r data">37.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">193</th>
+<td class="r data">193</td>
+<td class="r data">2013.167</td>
+<td class="r data">43.8</td>
+<td class="r data">57.58945</td>
+<td class="r data">7</td>
+<td class="r data">24.9675</td>
+<td class="r data">121.54069</td>
+<td class="r data">42.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">194</th>
+<td class="r data">194</td>
+<td class="r data">2013.417</td>
+<td class="r data">9.7</td>
+<td class="r data">421.479</td>
+<td class="r data">5</td>
+<td class="r data">24.98246</td>
+<td class="r data">121.54477</td>
+<td class="r data">49.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">195</th>
+<td class="r data">195</td>
+<td class="r data">2013.5</td>
+<td class="r data">15.2</td>
+<td class="r data">3771.895</td>
+<td class="r data">0</td>
+<td class="r data">24.93363</td>
+<td class="r data">121.51158</td>
+<td class="r data">29.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">196</th>
+<td class="r data">196</td>
+<td class="r data">2013.333</td>
+<td class="r data">15.2</td>
+<td class="r data">461.1016</td>
+<td class="r data">5</td>
+<td class="r data">24.95425</td>
+<td class="r data">121.5399</td>
+<td class="r data">34.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">197</th>
+<td class="r data">197</td>
+<td class="r data">2013</td>
+<td class="r data">22.8</td>
+<td class="r data">707.9067</td>
+<td class="r data">2</td>
+<td class="r data">24.981</td>
+<td class="r data">121.54713</td>
+<td class="r data">36.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">198</th>
+<td class="r data">198</td>
+<td class="r data">2013.25</td>
+<td class="r data">34.4</td>
+<td class="r data">126.7286</td>
+<td class="r data">8</td>
+<td class="r data">24.96881</td>
+<td class="r data">121.54089</td>
+<td class="r data">48.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">199</th>
+<td class="r data">199</td>
+<td class="r data">2013.083</td>
+<td class="r data">34</td>
+<td class="r data">157.6052</td>
+<td class="r data">7</td>
+<td class="r data">24.96628</td>
+<td class="r data">121.54196</td>
+<td class="r data">39.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">200</th>
+<td class="r data">200</td>
+<td class="r data">2013.417</td>
+<td class="r data">18.2</td>
+<td class="r data">451.6419</td>
+<td class="r data">8</td>
+<td class="r data">24.96945</td>
+<td class="r data">121.5449</td>
+<td class="r data">31.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">201</th>
+<td class="r data">201</td>
+<td class="r data">2013.417</td>
+<td class="r data">17.4</td>
+<td class="r data">995.7554</td>
+<td class="r data">0</td>
+<td class="r data">24.96305</td>
+<td class="r data">121.54915</td>
+<td class="r data">25.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">202</th>
+<td class="r data">202</td>
+<td class="r data">2013.417</td>
+<td class="r data">13.1</td>
+<td class="r data">561.9845</td>
+<td class="r data">5</td>
+<td class="r data">24.98746</td>
+<td class="r data">121.54391</td>
+<td class="r data">45.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">203</th>
+<td class="r data">203</td>
+<td class="r data">2012.917</td>
+<td class="r data">38.3</td>
+<td class="r data">642.6985</td>
+<td class="r data">3</td>
+<td class="r data">24.97559</td>
+<td class="r data">121.53713</td>
+<td class="r data">31.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">204</th>
+<td class="r data">204</td>
+<td class="r data">2012.667</td>
+<td class="r data">15.6</td>
+<td class="r data">289.3248</td>
+<td class="r data">5</td>
+<td class="r data">24.98203</td>
+<td class="r data">121.54348</td>
+<td class="r data">46.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">205</th>
+<td class="r data">205</td>
+<td class="r data">2013</td>
+<td class="r data">18</td>
+<td class="r data">1414.837</td>
+<td class="r data">1</td>
+<td class="r data">24.95182</td>
+<td class="r data">121.54887</td>
+<td class="r data">26.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">206</th>
+<td class="r data">206</td>
+<td class="r data">2013.083</td>
+<td class="r data">12.8</td>
+<td class="r data">1449.722</td>
+<td class="r data">3</td>
+<td class="r data">24.97289</td>
+<td class="r data">121.51728</td>
+<td class="r data">21.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">207</th>
+<td class="r data">207</td>
+<td class="r data">2013.25</td>
+<td class="r data">22.2</td>
+<td class="r data">379.5575</td>
+<td class="r data">10</td>
+<td class="r data">24.98343</td>
+<td class="r data">121.53762</td>
+<td class="r data">44</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">208</th>
+<td class="r data">208</td>
+<td class="r data">2013.083</td>
+<td class="r data">38.5</td>
+<td class="r data">665.0636</td>
+<td class="r data">3</td>
+<td class="r data">24.97503</td>
+<td class="r data">121.53692</td>
+<td class="r data">34.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">209</th>
+<td class="r data">209</td>
+<td class="r data">2012.75</td>
+<td class="r data">11.5</td>
+<td class="r data">1360.139</td>
+<td class="r data">1</td>
+<td class="r data">24.95204</td>
+<td class="r data">121.54842</td>
+<td class="r data">26.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">210</th>
+<td class="r data">210</td>
+<td class="r data">2012.833</td>
+<td class="r data">34.8</td>
+<td class="r data">175.6294</td>
+<td class="r data">8</td>
+<td class="r data">24.97347</td>
+<td class="r data">121.54271</td>
+<td class="r data">40.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">211</th>
+<td class="r data">211</td>
+<td class="r data">2013.5</td>
+<td class="r data">5.2</td>
+<td class="r data">390.5684</td>
+<td class="r data">5</td>
+<td class="r data">24.97937</td>
+<td class="r data">121.54245</td>
+<td class="r data">52.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">212</th>
+<td class="r data">212</td>
+<td class="r data">2013.083</td>
+<td class="r data">0</td>
+<td class="r data">274.0144</td>
+<td class="r data">1</td>
+<td class="r data">24.9748</td>
+<td class="r data">121.53059</td>
+<td class="r data">43.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">213</th>
+<td class="r data">213</td>
+<td class="r data">2013.333</td>
+<td class="r data">17.6</td>
+<td class="r data">1805.665</td>
+<td class="r data">2</td>
+<td class="r data">24.98672</td>
+<td class="r data">121.52091</td>
+<td class="r data">31.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">214</th>
+<td class="r data">214</td>
+<td class="r data">2013.083</td>
+<td class="r data">6.2</td>
+<td class="r data">90.45606</td>
+<td class="r data">9</td>
+<td class="r data">24.97433</td>
+<td class="r data">121.5431</td>
+<td class="r data">58</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">215</th>
+<td class="r data">215</td>
+<td class="r data">2013.583</td>
+<td class="r data">18.1</td>
+<td class="r data">1783.18</td>
+<td class="r data">3</td>
+<td class="r data">24.96731</td>
+<td class="r data">121.51486</td>
+<td class="r data">20.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">216</th>
+<td class="r data">216</td>
+<td class="r data">2013.333</td>
+<td class="r data">19.2</td>
+<td class="r data">383.7129</td>
+<td class="r data">8</td>
+<td class="r data">24.972</td>
+<td class="r data">121.54477</td>
+<td class="r data">48.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">217</th>
+<td class="r data">217</td>
+<td class="r data">2013.25</td>
+<td class="r data">37.8</td>
+<td class="r data">590.9292</td>
+<td class="r data">1</td>
+<td class="r data">24.97153</td>
+<td class="r data">121.53559</td>
+<td class="r data">39.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">218</th>
+<td class="r data">218</td>
+<td class="r data">2012.917</td>
+<td class="r data">28</td>
+<td class="r data">372.6242</td>
+<td class="r data">6</td>
+<td class="r data">24.97838</td>
+<td class="r data">121.54119</td>
+<td class="r data">40.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">219</th>
+<td class="r data">219</td>
+<td class="r data">2013.417</td>
+<td class="r data">13.6</td>
+<td class="r data">492.2313</td>
+<td class="r data">5</td>
+<td class="r data">24.96515</td>
+<td class="r data">121.53737</td>
+<td class="r data">43.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">220</th>
+<td class="r data">220</td>
+<td class="r data">2012.75</td>
+<td class="r data">29.3</td>
+<td class="r data">529.7771</td>
+<td class="r data">8</td>
+<td class="r data">24.98102</td>
+<td class="r data">121.53655</td>
+<td class="r data">40.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">221</th>
+<td class="r data">221</td>
+<td class="r data">2013.333</td>
+<td class="r data">37.2</td>
+<td class="r data">186.5101</td>
+<td class="r data">9</td>
+<td class="r data">24.97703</td>
+<td class="r data">121.54265</td>
+<td class="r data">78.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">222</th>
+<td class="r data">222</td>
+<td class="r data">2013.333</td>
+<td class="r data">9</td>
+<td class="r data">1402.016</td>
+<td class="r data">0</td>
+<td class="r data">24.98569</td>
+<td class="r data">121.5276</td>
+<td class="r data">38.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">223</th>
+<td class="r data">223</td>
+<td class="r data">2013.583</td>
+<td class="r data">30.6</td>
+<td class="r data">431.1114</td>
+<td class="r data">10</td>
+<td class="r data">24.98123</td>
+<td class="r data">121.53743</td>
+<td class="r data">48.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">224</th>
+<td class="r data">224</td>
+<td class="r data">2013.25</td>
+<td class="r data">9.1</td>
+<td class="r data">1402.016</td>
+<td class="r data">0</td>
+<td class="r data">24.98569</td>
+<td class="r data">121.5276</td>
+<td class="r data">42.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">225</th>
+<td class="r data">225</td>
+<td class="r data">2013.333</td>
+<td class="r data">34.5</td>
+<td class="r data">324.9419</td>
+<td class="r data">6</td>
+<td class="r data">24.97814</td>
+<td class="r data">121.5417</td>
+<td class="r data">46</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">226</th>
+<td class="r data">226</td>
+<td class="r data">2013.25</td>
+<td class="r data">1.1</td>
+<td class="r data">193.5845</td>
+<td class="r data">6</td>
+<td class="r data">24.96571</td>
+<td class="r data">121.54089</td>
+<td class="r data">49</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">227</th>
+<td class="r data">227</td>
+<td class="r data">2013</td>
+<td class="r data">16.5</td>
+<td class="r data">4082.015</td>
+<td class="r data">0</td>
+<td class="r data">24.94155</td>
+<td class="r data">121.50381</td>
+<td class="r data">12.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">228</th>
+<td class="r data">228</td>
+<td class="r data">2012.917</td>
+<td class="r data">32.4</td>
+<td class="r data">265.0609</td>
+<td class="r data">8</td>
+<td class="r data">24.98059</td>
+<td class="r data">121.53986</td>
+<td class="r data">40.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">229</th>
+<td class="r data">229</td>
+<td class="r data">2013.417</td>
+<td class="r data">11.9</td>
+<td class="r data">3171.329</td>
+<td class="r data">0</td>
+<td class="r data">25.00115</td>
+<td class="r data">121.51776</td>
+<td class="r data">46.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">230</th>
+<td class="r data">230</td>
+<td class="r data">2013.583</td>
+<td class="r data">31</td>
+<td class="r data">1156.412</td>
+<td class="r data">0</td>
+<td class="r data">24.9489</td>
+<td class="r data">121.53095</td>
+<td class="r data">19</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">231</th>
+<td class="r data">231</td>
+<td class="r data">2013.5</td>
+<td class="r data">4</td>
+<td class="r data">2147.376</td>
+<td class="r data">3</td>
+<td class="r data">24.96299</td>
+<td class="r data">121.51284</td>
+<td class="r data">33.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">232</th>
+<td class="r data">232</td>
+<td class="r data">2012.833</td>
+<td class="r data">16.2</td>
+<td class="r data">4074.736</td>
+<td class="r data">0</td>
+<td class="r data">24.94235</td>
+<td class="r data">121.50357</td>
+<td class="r data">14.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">233</th>
+<td class="r data">233</td>
+<td class="r data">2012.917</td>
+<td class="r data">27.1</td>
+<td class="r data">4412.765</td>
+<td class="r data">1</td>
+<td class="r data">24.95032</td>
+<td class="r data">121.49587</td>
+<td class="r data">17.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">234</th>
+<td class="r data">234</td>
+<td class="r data">2013.333</td>
+<td class="r data">39.7</td>
+<td class="r data">333.3679</td>
+<td class="r data">9</td>
+<td class="r data">24.98016</td>
+<td class="r data">121.53932</td>
+<td class="r data">32.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">235</th>
+<td class="r data">235</td>
+<td class="r data">2013.25</td>
+<td class="r data">8</td>
+<td class="r data">2216.612</td>
+<td class="r data">4</td>
+<td class="r data">24.96007</td>
+<td class="r data">121.51361</td>
+<td class="r data">23.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">236</th>
+<td class="r data">236</td>
+<td class="r data">2012.75</td>
+<td class="r data">12.9</td>
+<td class="r data">250.631</td>
+<td class="r data">7</td>
+<td class="r data">24.96606</td>
+<td class="r data">121.54297</td>
+<td class="r data">39.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">237</th>
+<td class="r data">237</td>
+<td class="r data">2013.167</td>
+<td class="r data">3.6</td>
+<td class="r data">373.8389</td>
+<td class="r data">10</td>
+<td class="r data">24.98322</td>
+<td class="r data">121.53765</td>
+<td class="r data">61.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">238</th>
+<td class="r data">238</td>
+<td class="r data">2013.167</td>
+<td class="r data">13</td>
+<td class="r data">732.8528</td>
+<td class="r data">0</td>
+<td class="r data">24.97668</td>
+<td class="r data">121.52518</td>
+<td class="r data">39</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">239</th>
+<td class="r data">239</td>
+<td class="r data">2013.083</td>
+<td class="r data">12.8</td>
+<td class="r data">732.8528</td>
+<td class="r data">0</td>
+<td class="r data">24.97668</td>
+<td class="r data">121.52518</td>
+<td class="r data">40.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">240</th>
+<td class="r data">240</td>
+<td class="r data">2013.5</td>
+<td class="r data">18.1</td>
+<td class="r data">837.7233</td>
+<td class="r data">0</td>
+<td class="r data">24.96334</td>
+<td class="r data">121.54767</td>
+<td class="r data">29.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">241</th>
+<td class="r data">241</td>
+<td class="r data">2013.083</td>
+<td class="r data">11</td>
+<td class="r data">1712.632</td>
+<td class="r data">2</td>
+<td class="r data">24.96412</td>
+<td class="r data">121.5167</td>
+<td class="r data">28.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">242</th>
+<td class="r data">242</td>
+<td class="r data">2013.5</td>
+<td class="r data">13.7</td>
+<td class="r data">250.631</td>
+<td class="r data">7</td>
+<td class="r data">24.96606</td>
+<td class="r data">121.54297</td>
+<td class="r data">41.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">243</th>
+<td class="r data">243</td>
+<td class="r data">2012.833</td>
+<td class="r data">2</td>
+<td class="r data">2077.39</td>
+<td class="r data">3</td>
+<td class="r data">24.96357</td>
+<td class="r data">121.51329</td>
+<td class="r data">33.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">244</th>
+<td class="r data">244</td>
+<td class="r data">2013.417</td>
+<td class="r data">32.8</td>
+<td class="r data">204.1705</td>
+<td class="r data">8</td>
+<td class="r data">24.98236</td>
+<td class="r data">121.53923</td>
+<td class="r data">48.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">245</th>
+<td class="r data">245</td>
+<td class="r data">2013.083</td>
+<td class="r data">4.8</td>
+<td class="r data">1559.827</td>
+<td class="r data">3</td>
+<td class="r data">24.97213</td>
+<td class="r data">121.51627</td>
+<td class="r data">21.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">246</th>
+<td class="r data">246</td>
+<td class="r data">2013.417</td>
+<td class="r data">7.5</td>
+<td class="r data">639.6198</td>
+<td class="r data">5</td>
+<td class="r data">24.97258</td>
+<td class="r data">121.54814</td>
+<td class="r data">40.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">247</th>
+<td class="r data">247</td>
+<td class="r data">2013.417</td>
+<td class="r data">16.4</td>
+<td class="r data">389.8219</td>
+<td class="r data">6</td>
+<td class="r data">24.96412</td>
+<td class="r data">121.54273</td>
+<td class="r data">40.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">248</th>
+<td class="r data">248</td>
+<td class="r data">2013.333</td>
+<td class="r data">21.7</td>
+<td class="r data">1055.067</td>
+<td class="r data">0</td>
+<td class="r data">24.96211</td>
+<td class="r data">121.54928</td>
+<td class="r data">23.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">249</th>
+<td class="r data">249</td>
+<td class="r data">2013</td>
+<td class="r data">19</td>
+<td class="r data">1009.235</td>
+<td class="r data">0</td>
+<td class="r data">24.96357</td>
+<td class="r data">121.54951</td>
+<td class="r data">22.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">250</th>
+<td class="r data">250</td>
+<td class="r data">2012.833</td>
+<td class="r data">18</td>
+<td class="r data">6306.153</td>
+<td class="r data">1</td>
+<td class="r data">24.95743</td>
+<td class="r data">121.47516</td>
+<td class="r data">15</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">251</th>
+<td class="r data">251</td>
+<td class="r data">2013.167</td>
+<td class="r data">39.2</td>
+<td class="r data">424.7132</td>
+<td class="r data">7</td>
+<td class="r data">24.97429</td>
+<td class="r data">121.53917</td>
+<td class="r data">30</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">252</th>
+<td class="r data">252</td>
+<td class="r data">2012.917</td>
+<td class="r data">31.7</td>
+<td class="r data">1159.454</td>
+<td class="r data">0</td>
+<td class="r data">24.9496</td>
+<td class="r data">121.53018</td>
+<td class="r data">13.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">253</th>
+<td class="r data">253</td>
+<td class="r data">2012.833</td>
+<td class="r data">5.9</td>
+<td class="r data">90.45606</td>
+<td class="r data">9</td>
+<td class="r data">24.97433</td>
+<td class="r data">121.5431</td>
+<td class="r data">52.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">254</th>
+<td class="r data">254</td>
+<td class="r data">2012.667</td>
+<td class="r data">30.4</td>
+<td class="r data">1735.595</td>
+<td class="r data">2</td>
+<td class="r data">24.96464</td>
+<td class="r data">121.51623</td>
+<td class="r data">25.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">255</th>
+<td class="r data">255</td>
+<td class="r data">2012.667</td>
+<td class="r data">1.1</td>
+<td class="r data">329.9747</td>
+<td class="r data">5</td>
+<td class="r data">24.98254</td>
+<td class="r data">121.54395</td>
+<td class="r data">51.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">256</th>
+<td class="r data">256</td>
+<td class="r data">2013.417</td>
+<td class="r data">31.5</td>
+<td class="r data">5512.038</td>
+<td class="r data">1</td>
+<td class="r data">24.95095</td>
+<td class="r data">121.48458</td>
+<td class="r data">17.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">257</th>
+<td class="r data">257</td>
+<td class="r data">2012.667</td>
+<td class="r data">14.6</td>
+<td class="r data">339.2289</td>
+<td class="r data">1</td>
+<td class="r data">24.97519</td>
+<td class="r data">121.53151</td>
+<td class="r data">26.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">258</th>
+<td class="r data">258</td>
+<td class="r data">2013.25</td>
+<td class="r data">17.3</td>
+<td class="r data">444.1334</td>
+<td class="r data">1</td>
+<td class="r data">24.97501</td>
+<td class="r data">121.5273</td>
+<td class="r data">43.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">259</th>
+<td class="r data">259</td>
+<td class="r data">2013.417</td>
+<td class="r data">0</td>
+<td class="r data">292.9978</td>
+<td class="r data">6</td>
+<td class="r data">24.97744</td>
+<td class="r data">121.54458</td>
+<td class="r data">63.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">260</th>
+<td class="r data">260</td>
+<td class="r data">2013.083</td>
+<td class="r data">17.7</td>
+<td class="r data">837.7233</td>
+<td class="r data">0</td>
+<td class="r data">24.96334</td>
+<td class="r data">121.54767</td>
+<td class="r data">28.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">261</th>
+<td class="r data">261</td>
+<td class="r data">2013.25</td>
+<td class="r data">17</td>
+<td class="r data">1485.097</td>
+<td class="r data">4</td>
+<td class="r data">24.97073</td>
+<td class="r data">121.517</td>
+<td class="r data">30.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">262</th>
+<td class="r data">262</td>
+<td class="r data">2013.167</td>
+<td class="r data">16.2</td>
+<td class="r data">2288.011</td>
+<td class="r data">3</td>
+<td class="r data">24.95885</td>
+<td class="r data">121.51359</td>
+<td class="r data">24.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">263</th>
+<td class="r data">263</td>
+<td class="r data">2012.917</td>
+<td class="r data">15.9</td>
+<td class="r data">289.3248</td>
+<td class="r data">5</td>
+<td class="r data">24.98203</td>
+<td class="r data">121.54348</td>
+<td class="r data">53</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">264</th>
+<td class="r data">264</td>
+<td class="r data">2013.417</td>
+<td class="r data">3.9</td>
+<td class="r data">2147.376</td>
+<td class="r data">3</td>
+<td class="r data">24.96299</td>
+<td class="r data">121.51284</td>
+<td class="r data">31.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">265</th>
+<td class="r data">265</td>
+<td class="r data">2013.167</td>
+<td class="r data">32.6</td>
+<td class="r data">493.657</td>
+<td class="r data">7</td>
+<td class="r data">24.96968</td>
+<td class="r data">121.54522</td>
+<td class="r data">40.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">266</th>
+<td class="r data">266</td>
+<td class="r data">2012.833</td>
+<td class="r data">15.7</td>
+<td class="r data">815.9314</td>
+<td class="r data">4</td>
+<td class="r data">24.97886</td>
+<td class="r data">121.53464</td>
+<td class="r data">38.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">267</th>
+<td class="r data">267</td>
+<td class="r data">2013.25</td>
+<td class="r data">17.8</td>
+<td class="r data">1783.18</td>
+<td class="r data">3</td>
+<td class="r data">24.96731</td>
+<td class="r data">121.51486</td>
+<td class="r data">23.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">268</th>
+<td class="r data">268</td>
+<td class="r data">2012.833</td>
+<td class="r data">34.7</td>
+<td class="r data">482.7581</td>
+<td class="r data">5</td>
+<td class="r data">24.97433</td>
+<td class="r data">121.53863</td>
+<td class="r data">41.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">269</th>
+<td class="r data">269</td>
+<td class="r data">2013.417</td>
+<td class="r data">17.2</td>
+<td class="r data">390.5684</td>
+<td class="r data">5</td>
+<td class="r data">24.97937</td>
+<td class="r data">121.54245</td>
+<td class="r data">40.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">270</th>
+<td class="r data">270</td>
+<td class="r data">2013</td>
+<td class="r data">17.6</td>
+<td class="r data">837.7233</td>
+<td class="r data">0</td>
+<td class="r data">24.96334</td>
+<td class="r data">121.54767</td>
+<td class="r data">23</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">271</th>
+<td class="r data">271</td>
+<td class="r data">2013.333</td>
+<td class="r data">10.8</td>
+<td class="r data">252.5822</td>
+<td class="r data">1</td>
+<td class="r data">24.9746</td>
+<td class="r data">121.53046</td>
+<td class="r data">117.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">272</th>
+<td class="r data">272</td>
+<td class="r data">2012.917</td>
+<td class="r data">17.7</td>
+<td class="r data">451.6419</td>
+<td class="r data">8</td>
+<td class="r data">24.96945</td>
+<td class="r data">121.5449</td>
+<td class="r data">26.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">273</th>
+<td class="r data">273</td>
+<td class="r data">2012.75</td>
+<td class="r data">13</td>
+<td class="r data">492.2313</td>
+<td class="r data">5</td>
+<td class="r data">24.96515</td>
+<td class="r data">121.53737</td>
+<td class="r data">40.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">274</th>
+<td class="r data">274</td>
+<td class="r data">2013.417</td>
+<td class="r data">13.2</td>
+<td class="r data">170.1289</td>
+<td class="r data">1</td>
+<td class="r data">24.97371</td>
+<td class="r data">121.52984</td>
+<td class="r data">29.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">275</th>
+<td class="r data">275</td>
+<td class="r data">2013.167</td>
+<td class="r data">27.5</td>
+<td class="r data">394.0173</td>
+<td class="r data">7</td>
+<td class="r data">24.97305</td>
+<td class="r data">121.53994</td>
+<td class="r data">41</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">276</th>
+<td class="r data">276</td>
+<td class="r data">2012.667</td>
+<td class="r data">1.5</td>
+<td class="r data">23.38284</td>
+<td class="r data">7</td>
+<td class="r data">24.96772</td>
+<td class="r data">121.54102</td>
+<td class="r data">49.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">277</th>
+<td class="r data">277</td>
+<td class="r data">2013</td>
+<td class="r data">19.1</td>
+<td class="r data">461.1016</td>
+<td class="r data">5</td>
+<td class="r data">24.95425</td>
+<td class="r data">121.5399</td>
+<td class="r data">34</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">278</th>
+<td class="r data">278</td>
+<td class="r data">2013.417</td>
+<td class="r data">21.2</td>
+<td class="r data">2185.128</td>
+<td class="r data">3</td>
+<td class="r data">24.96322</td>
+<td class="r data">121.51237</td>
+<td class="r data">27.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">279</th>
+<td class="r data">279</td>
+<td class="r data">2012.75</td>
+<td class="r data">0</td>
+<td class="r data">208.3905</td>
+<td class="r data">6</td>
+<td class="r data">24.95618</td>
+<td class="r data">121.53844</td>
+<td class="r data">44</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">280</th>
+<td class="r data">280</td>
+<td class="r data">2013.417</td>
+<td class="r data">2.6</td>
+<td class="r data">1554.25</td>
+<td class="r data">3</td>
+<td class="r data">24.97026</td>
+<td class="r data">121.51642</td>
+<td class="r data">31.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">281</th>
+<td class="r data">281</td>
+<td class="r data">2013.25</td>
+<td class="r data">2.3</td>
+<td class="r data">184.3302</td>
+<td class="r data">6</td>
+<td class="r data">24.96581</td>
+<td class="r data">121.54086</td>
+<td class="r data">45.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">282</th>
+<td class="r data">282</td>
+<td class="r data">2013.333</td>
+<td class="r data">4.7</td>
+<td class="r data">387.7721</td>
+<td class="r data">9</td>
+<td class="r data">24.98118</td>
+<td class="r data">121.53788</td>
+<td class="r data">44.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">283</th>
+<td class="r data">283</td>
+<td class="r data">2012.917</td>
+<td class="r data">2</td>
+<td class="r data">1455.798</td>
+<td class="r data">1</td>
+<td class="r data">24.9512</td>
+<td class="r data">121.549</td>
+<td class="r data">25.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">284</th>
+<td class="r data">284</td>
+<td class="r data">2013.417</td>
+<td class="r data">33.5</td>
+<td class="r data">1978.671</td>
+<td class="r data">2</td>
+<td class="r data">24.98674</td>
+<td class="r data">121.51844</td>
+<td class="r data">23.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">285</th>
+<td class="r data">285</td>
+<td class="r data">2012.917</td>
+<td class="r data">15</td>
+<td class="r data">383.2805</td>
+<td class="r data">7</td>
+<td class="r data">24.96735</td>
+<td class="r data">121.54464</td>
+<td class="r data">34.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">286</th>
+<td class="r data">286</td>
+<td class="r data">2013.167</td>
+<td class="r data">30.1</td>
+<td class="r data">718.2937</td>
+<td class="r data">3</td>
+<td class="r data">24.97509</td>
+<td class="r data">121.53644</td>
+<td class="r data">55.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">287</th>
+<td class="r data">287</td>
+<td class="r data">2012.917</td>
+<td class="r data">5.9</td>
+<td class="r data">90.45606</td>
+<td class="r data">9</td>
+<td class="r data">24.97433</td>
+<td class="r data">121.5431</td>
+<td class="r data">56.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">288</th>
+<td class="r data">288</td>
+<td class="r data">2013</td>
+<td class="r data">19.2</td>
+<td class="r data">461.1016</td>
+<td class="r data">5</td>
+<td class="r data">24.95425</td>
+<td class="r data">121.5399</td>
+<td class="r data">32.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">289</th>
+<td class="r data">289</td>
+<td class="r data">2013.583</td>
+<td class="r data">16.6</td>
+<td class="r data">323.6912</td>
+<td class="r data">6</td>
+<td class="r data">24.97841</td>
+<td class="r data">121.5428</td>
+<td class="r data">51</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">290</th>
+<td class="r data">290</td>
+<td class="r data">2013.333</td>
+<td class="r data">13.9</td>
+<td class="r data">289.3248</td>
+<td class="r data">5</td>
+<td class="r data">24.98203</td>
+<td class="r data">121.54348</td>
+<td class="r data">44.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">291</th>
+<td class="r data">291</td>
+<td class="r data">2013.083</td>
+<td class="r data">37.7</td>
+<td class="r data">490.3446</td>
+<td class="r data">0</td>
+<td class="r data">24.97217</td>
+<td class="r data">121.53471</td>
+<td class="r data">37</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">292</th>
+<td class="r data">292</td>
+<td class="r data">2012.833</td>
+<td class="r data">3.4</td>
+<td class="r data">56.47425</td>
+<td class="r data">7</td>
+<td class="r data">24.95744</td>
+<td class="r data">121.53711</td>
+<td class="r data">54.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">293</th>
+<td class="r data">293</td>
+<td class="r data">2013.083</td>
+<td class="r data">17.5</td>
+<td class="r data">395.6747</td>
+<td class="r data">5</td>
+<td class="r data">24.95674</td>
+<td class="r data">121.534</td>
+<td class="r data">24.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">294</th>
+<td class="r data">294</td>
+<td class="r data">2012.667</td>
+<td class="r data">12.6</td>
+<td class="r data">383.2805</td>
+<td class="r data">7</td>
+<td class="r data">24.96735</td>
+<td class="r data">121.54464</td>
+<td class="r data">42.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">295</th>
+<td class="r data">295</td>
+<td class="r data">2013.5</td>
+<td class="r data">26.4</td>
+<td class="r data">335.5273</td>
+<td class="r data">6</td>
+<td class="r data">24.9796</td>
+<td class="r data">121.5414</td>
+<td class="r data">38.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">296</th>
+<td class="r data">296</td>
+<td class="r data">2013.167</td>
+<td class="r data">18.2</td>
+<td class="r data">2179.59</td>
+<td class="r data">3</td>
+<td class="r data">24.96299</td>
+<td class="r data">121.51252</td>
+<td class="r data">21.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">297</th>
+<td class="r data">297</td>
+<td class="r data">2012.75</td>
+<td class="r data">12.5</td>
+<td class="r data">1144.436</td>
+<td class="r data">4</td>
+<td class="r data">24.99176</td>
+<td class="r data">121.53456</td>
+<td class="r data">34.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">298</th>
+<td class="r data">298</td>
+<td class="r data">2012.833</td>
+<td class="r data">34.9</td>
+<td class="r data">567.0349</td>
+<td class="r data">4</td>
+<td class="r data">24.97003</td>
+<td class="r data">121.5458</td>
+<td class="r data">28.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">299</th>
+<td class="r data">299</td>
+<td class="r data">2013.333</td>
+<td class="r data">16.7</td>
+<td class="r data">4082.015</td>
+<td class="r data">0</td>
+<td class="r data">24.94155</td>
+<td class="r data">121.50381</td>
+<td class="r data">16.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">300</th>
+<td class="r data">300</td>
+<td class="r data">2013.167</td>
+<td class="r data">33.2</td>
+<td class="r data">121.7262</td>
+<td class="r data">10</td>
+<td class="r data">24.98178</td>
+<td class="r data">121.54059</td>
+<td class="r data">46.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">301</th>
+<td class="r data">301</td>
+<td class="r data">2013.083</td>
+<td class="r data">2.5</td>
+<td class="r data">156.2442</td>
+<td class="r data">4</td>
+<td class="r data">24.96696</td>
+<td class="r data">121.53992</td>
+<td class="r data">36.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">302</th>
+<td class="r data">302</td>
+<td class="r data">2012.75</td>
+<td class="r data">38</td>
+<td class="r data">461.7848</td>
+<td class="r data">0</td>
+<td class="r data">24.97229</td>
+<td class="r data">121.53445</td>
+<td class="r data">35.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">303</th>
+<td class="r data">303</td>
+<td class="r data">2013.5</td>
+<td class="r data">16.5</td>
+<td class="r data">2288.011</td>
+<td class="r data">3</td>
+<td class="r data">24.95885</td>
+<td class="r data">121.51359</td>
+<td class="r data">23.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">304</th>
+<td class="r data">304</td>
+<td class="r data">2013.5</td>
+<td class="r data">38.3</td>
+<td class="r data">439.7105</td>
+<td class="r data">0</td>
+<td class="r data">24.97161</td>
+<td class="r data">121.53423</td>
+<td class="r data">38.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">305</th>
+<td class="r data">305</td>
+<td class="r data">2013.417</td>
+<td class="r data">20</td>
+<td class="r data">1626.083</td>
+<td class="r data">3</td>
+<td class="r data">24.96622</td>
+<td class="r data">121.51668</td>
+<td class="r data">29.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">306</th>
+<td class="r data">306</td>
+<td class="r data">2013.083</td>
+<td class="r data">16.2</td>
+<td class="r data">289.3248</td>
+<td class="r data">5</td>
+<td class="r data">24.98203</td>
+<td class="r data">121.54348</td>
+<td class="r data">55</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">307</th>
+<td class="r data">307</td>
+<td class="r data">2013.5</td>
+<td class="r data">14.4</td>
+<td class="r data">169.9803</td>
+<td class="r data">1</td>
+<td class="r data">24.97369</td>
+<td class="r data">121.52979</td>
+<td class="r data">50.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">308</th>
+<td class="r data">308</td>
+<td class="r data">2012.833</td>
+<td class="r data">10.3</td>
+<td class="r data">3079.89</td>
+<td class="r data">0</td>
+<td class="r data">24.9546</td>
+<td class="r data">121.56627</td>
+<td class="r data">24.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">309</th>
+<td class="r data">309</td>
+<td class="r data">2013.417</td>
+<td class="r data">16.4</td>
+<td class="r data">289.3248</td>
+<td class="r data">5</td>
+<td class="r data">24.98203</td>
+<td class="r data">121.54348</td>
+<td class="r data">53</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">310</th>
+<td class="r data">310</td>
+<td class="r data">2013.25</td>
+<td class="r data">30.3</td>
+<td class="r data">1264.73</td>
+<td class="r data">0</td>
+<td class="r data">24.94883</td>
+<td class="r data">121.52954</td>
+<td class="r data">19.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">311</th>
+<td class="r data">311</td>
+<td class="r data">2013.583</td>
+<td class="r data">16.4</td>
+<td class="r data">1643.499</td>
+<td class="r data">2</td>
+<td class="r data">24.95394</td>
+<td class="r data">121.55174</td>
+<td class="r data">24.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">312</th>
+<td class="r data">312</td>
+<td class="r data">2013.167</td>
+<td class="r data">21.3</td>
+<td class="r data">537.7971</td>
+<td class="r data">4</td>
+<td class="r data">24.97425</td>
+<td class="r data">121.53814</td>
+<td class="r data">42.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">313</th>
+<td class="r data">313</td>
+<td class="r data">2013.583</td>
+<td class="r data">35.4</td>
+<td class="r data">318.5292</td>
+<td class="r data">9</td>
+<td class="r data">24.97071</td>
+<td class="r data">121.54069</td>
+<td class="r data">78</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">314</th>
+<td class="r data">314</td>
+<td class="r data">2013.333</td>
+<td class="r data">8.3</td>
+<td class="r data">104.8101</td>
+<td class="r data">5</td>
+<td class="r data">24.96674</td>
+<td class="r data">121.54067</td>
+<td class="r data">42.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">315</th>
+<td class="r data">315</td>
+<td class="r data">2013.25</td>
+<td class="r data">3.7</td>
+<td class="r data">577.9615</td>
+<td class="r data">6</td>
+<td class="r data">24.97201</td>
+<td class="r data">121.54722</td>
+<td class="r data">41.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">316</th>
+<td class="r data">316</td>
+<td class="r data">2013.083</td>
+<td class="r data">15.6</td>
+<td class="r data">1756.411</td>
+<td class="r data">2</td>
+<td class="r data">24.9832</td>
+<td class="r data">121.51812</td>
+<td class="r data">27.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">317</th>
+<td class="r data">317</td>
+<td class="r data">2013.25</td>
+<td class="r data">13.3</td>
+<td class="r data">250.631</td>
+<td class="r data">7</td>
+<td class="r data">24.96606</td>
+<td class="r data">121.54297</td>
+<td class="r data">42</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">318</th>
+<td class="r data">318</td>
+<td class="r data">2012.75</td>
+<td class="r data">15.6</td>
+<td class="r data">752.7669</td>
+<td class="r data">2</td>
+<td class="r data">24.97795</td>
+<td class="r data">121.53451</td>
+<td class="r data">37.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">319</th>
+<td class="r data">319</td>
+<td class="r data">2013.333</td>
+<td class="r data">7.1</td>
+<td class="r data">379.5575</td>
+<td class="r data">10</td>
+<td class="r data">24.98343</td>
+<td class="r data">121.53762</td>
+<td class="r data">49.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">320</th>
+<td class="r data">320</td>
+<td class="r data">2013.25</td>
+<td class="r data">34.6</td>
+<td class="r data">272.6783</td>
+<td class="r data">5</td>
+<td class="r data">24.95562</td>
+<td class="r data">121.53872</td>
+<td class="r data">26.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">321</th>
+<td class="r data">321</td>
+<td class="r data">2012.75</td>
+<td class="r data">13.5</td>
+<td class="r data">4197.349</td>
+<td class="r data">0</td>
+<td class="r data">24.93885</td>
+<td class="r data">121.50383</td>
+<td class="r data">18.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">322</th>
+<td class="r data">322</td>
+<td class="r data">2012.917</td>
+<td class="r data">16.9</td>
+<td class="r data">964.7496</td>
+<td class="r data">4</td>
+<td class="r data">24.98872</td>
+<td class="r data">121.53411</td>
+<td class="r data">37.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">323</th>
+<td class="r data">323</td>
+<td class="r data">2013</td>
+<td class="r data">12.9</td>
+<td class="r data">187.4823</td>
+<td class="r data">1</td>
+<td class="r data">24.97388</td>
+<td class="r data">121.52981</td>
+<td class="r data">33.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">324</th>
+<td class="r data">324</td>
+<td class="r data">2013.417</td>
+<td class="r data">28.6</td>
+<td class="r data">197.1338</td>
+<td class="r data">6</td>
+<td class="r data">24.97631</td>
+<td class="r data">121.54436</td>
+<td class="r data">42.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">325</th>
+<td class="r data">325</td>
+<td class="r data">2012.667</td>
+<td class="r data">12.4</td>
+<td class="r data">1712.632</td>
+<td class="r data">2</td>
+<td class="r data">24.96412</td>
+<td class="r data">121.5167</td>
+<td class="r data">31.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">326</th>
+<td class="r data">326</td>
+<td class="r data">2013.083</td>
+<td class="r data">36.6</td>
+<td class="r data">488.8193</td>
+<td class="r data">8</td>
+<td class="r data">24.97015</td>
+<td class="r data">121.54494</td>
+<td class="r data">38.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">327</th>
+<td class="r data">327</td>
+<td class="r data">2013.5</td>
+<td class="r data">4.1</td>
+<td class="r data">56.47425</td>
+<td class="r data">7</td>
+<td class="r data">24.95744</td>
+<td class="r data">121.53711</td>
+<td class="r data">62.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">328</th>
+<td class="r data">328</td>
+<td class="r data">2013.417</td>
+<td class="r data">3.5</td>
+<td class="r data">757.3377</td>
+<td class="r data">3</td>
+<td class="r data">24.97538</td>
+<td class="r data">121.54971</td>
+<td class="r data">36.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">329</th>
+<td class="r data">329</td>
+<td class="r data">2012.833</td>
+<td class="r data">15.9</td>
+<td class="r data">1497.713</td>
+<td class="r data">3</td>
+<td class="r data">24.97003</td>
+<td class="r data">121.51696</td>
+<td class="r data">23.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">330</th>
+<td class="r data">330</td>
+<td class="r data">2013</td>
+<td class="r data">13.6</td>
+<td class="r data">4197.349</td>
+<td class="r data">0</td>
+<td class="r data">24.93885</td>
+<td class="r data">121.50383</td>
+<td class="r data">19.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">331</th>
+<td class="r data">331</td>
+<td class="r data">2013.083</td>
+<td class="r data">32</td>
+<td class="r data">1156.777</td>
+<td class="r data">0</td>
+<td class="r data">24.94935</td>
+<td class="r data">121.53046</td>
+<td class="r data">12.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">332</th>
+<td class="r data">332</td>
+<td class="r data">2013.333</td>
+<td class="r data">25.6</td>
+<td class="r data">4519.69</td>
+<td class="r data">0</td>
+<td class="r data">24.94826</td>
+<td class="r data">121.49587</td>
+<td class="r data">15.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">333</th>
+<td class="r data">333</td>
+<td class="r data">2013.167</td>
+<td class="r data">39.8</td>
+<td class="r data">617.7134</td>
+<td class="r data">2</td>
+<td class="r data">24.97577</td>
+<td class="r data">121.53475</td>
+<td class="r data">39.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">334</th>
+<td class="r data">334</td>
+<td class="r data">2012.75</td>
+<td class="r data">7.8</td>
+<td class="r data">104.8101</td>
+<td class="r data">5</td>
+<td class="r data">24.96674</td>
+<td class="r data">121.54067</td>
+<td class="r data">38.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">335</th>
+<td class="r data">335</td>
+<td class="r data">2012.917</td>
+<td class="r data">30</td>
+<td class="r data">1013.341</td>
+<td class="r data">5</td>
+<td class="r data">24.99006</td>
+<td class="r data">121.5346</td>
+<td class="r data">22.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">336</th>
+<td class="r data">336</td>
+<td class="r data">2013.583</td>
+<td class="r data">27.3</td>
+<td class="r data">337.6016</td>
+<td class="r data">6</td>
+<td class="r data">24.96431</td>
+<td class="r data">121.54063</td>
+<td class="r data">36.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">337</th>
+<td class="r data">337</td>
+<td class="r data">2012.833</td>
+<td class="r data">5.1</td>
+<td class="r data">1867.233</td>
+<td class="r data">2</td>
+<td class="r data">24.98407</td>
+<td class="r data">121.51748</td>
+<td class="r data">35.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">338</th>
+<td class="r data">338</td>
+<td class="r data">2012.833</td>
+<td class="r data">31.3</td>
+<td class="r data">600.8604</td>
+<td class="r data">5</td>
+<td class="r data">24.96871</td>
+<td class="r data">121.54651</td>
+<td class="r data">30.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">339</th>
+<td class="r data">339</td>
+<td class="r data">2012.917</td>
+<td class="r data">31.5</td>
+<td class="r data">258.186</td>
+<td class="r data">9</td>
+<td class="r data">24.96867</td>
+<td class="r data">121.54331</td>
+<td class="r data">36.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">340</th>
+<td class="r data">340</td>
+<td class="r data">2013.333</td>
+<td class="r data">1.7</td>
+<td class="r data">329.9747</td>
+<td class="r data">5</td>
+<td class="r data">24.98254</td>
+<td class="r data">121.54395</td>
+<td class="r data">50.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">341</th>
+<td class="r data">341</td>
+<td class="r data">2013.333</td>
+<td class="r data">33.6</td>
+<td class="r data">270.8895</td>
+<td class="r data">0</td>
+<td class="r data">24.97281</td>
+<td class="r data">121.53265</td>
+<td class="r data">42.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">342</th>
+<td class="r data">342</td>
+<td class="r data">2013</td>
+<td class="r data">13</td>
+<td class="r data">750.0704</td>
+<td class="r data">2</td>
+<td class="r data">24.97371</td>
+<td class="r data">121.54951</td>
+<td class="r data">37</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">343</th>
+<td class="r data">343</td>
+<td class="r data">2012.667</td>
+<td class="r data">5.7</td>
+<td class="r data">90.45606</td>
+<td class="r data">9</td>
+<td class="r data">24.97433</td>
+<td class="r data">121.5431</td>
+<td class="r data">53.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">344</th>
+<td class="r data">344</td>
+<td class="r data">2013</td>
+<td class="r data">33.5</td>
+<td class="r data">563.2854</td>
+<td class="r data">8</td>
+<td class="r data">24.98223</td>
+<td class="r data">121.53597</td>
+<td class="r data">46.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">345</th>
+<td class="r data">345</td>
+<td class="r data">2013.5</td>
+<td class="r data">34.6</td>
+<td class="r data">3085.17</td>
+<td class="r data">0</td>
+<td class="r data">24.998</td>
+<td class="r data">121.5155</td>
+<td class="r data">41.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">346</th>
+<td class="r data">346</td>
+<td class="r data">2012.667</td>
+<td class="r data">0</td>
+<td class="r data">185.4296</td>
+<td class="r data">0</td>
+<td class="r data">24.9711</td>
+<td class="r data">121.5317</td>
+<td class="r data">37.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">347</th>
+<td class="r data">347</td>
+<td class="r data">2013.417</td>
+<td class="r data">13.2</td>
+<td class="r data">1712.632</td>
+<td class="r data">2</td>
+<td class="r data">24.96412</td>
+<td class="r data">121.5167</td>
+<td class="r data">30.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">348</th>
+<td class="r data">348</td>
+<td class="r data">2013.583</td>
+<td class="r data">17.4</td>
+<td class="r data">6488.021</td>
+<td class="r data">1</td>
+<td class="r data">24.95719</td>
+<td class="r data">121.47353</td>
+<td class="r data">11.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">349</th>
+<td class="r data">349</td>
+<td class="r data">2012.833</td>
+<td class="r data">4.6</td>
+<td class="r data">259.6607</td>
+<td class="r data">6</td>
+<td class="r data">24.97585</td>
+<td class="r data">121.54516</td>
+<td class="r data">53.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">350</th>
+<td class="r data">350</td>
+<td class="r data">2012.75</td>
+<td class="r data">7.8</td>
+<td class="r data">104.8101</td>
+<td class="r data">5</td>
+<td class="r data">24.96674</td>
+<td class="r data">121.54067</td>
+<td class="r data">47</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">351</th>
+<td class="r data">351</td>
+<td class="r data">2013</td>
+<td class="r data">13.2</td>
+<td class="r data">492.2313</td>
+<td class="r data">5</td>
+<td class="r data">24.96515</td>
+<td class="r data">121.53737</td>
+<td class="r data">42.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">352</th>
+<td class="r data">352</td>
+<td class="r data">2012.833</td>
+<td class="r data">4</td>
+<td class="r data">2180.245</td>
+<td class="r data">3</td>
+<td class="r data">24.96324</td>
+<td class="r data">121.51241</td>
+<td class="r data">28.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">353</th>
+<td class="r data">353</td>
+<td class="r data">2012.833</td>
+<td class="r data">18.4</td>
+<td class="r data">2674.961</td>
+<td class="r data">3</td>
+<td class="r data">24.96143</td>
+<td class="r data">121.50827</td>
+<td class="r data">25.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">354</th>
+<td class="r data">354</td>
+<td class="r data">2013.5</td>
+<td class="r data">4.1</td>
+<td class="r data">2147.376</td>
+<td class="r data">3</td>
+<td class="r data">24.96299</td>
+<td class="r data">121.51284</td>
+<td class="r data">31.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">355</th>
+<td class="r data">355</td>
+<td class="r data">2013.417</td>
+<td class="r data">12.2</td>
+<td class="r data">1360.139</td>
+<td class="r data">1</td>
+<td class="r data">24.95204</td>
+<td class="r data">121.54842</td>
+<td class="r data">30.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">356</th>
+<td class="r data">356</td>
+<td class="r data">2013.25</td>
+<td class="r data">3.8</td>
+<td class="r data">383.8624</td>
+<td class="r data">5</td>
+<td class="r data">24.98085</td>
+<td class="r data">121.54391</td>
+<td class="r data">60.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">357</th>
+<td class="r data">357</td>
+<td class="r data">2012.833</td>
+<td class="r data">10.3</td>
+<td class="r data">211.4473</td>
+<td class="r data">1</td>
+<td class="r data">24.97417</td>
+<td class="r data">121.52999</td>
+<td class="r data">45.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">358</th>
+<td class="r data">358</td>
+<td class="r data">2013.417</td>
+<td class="r data">0</td>
+<td class="r data">338.9679</td>
+<td class="r data">9</td>
+<td class="r data">24.96853</td>
+<td class="r data">121.54413</td>
+<td class="r data">44.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">359</th>
+<td class="r data">359</td>
+<td class="r data">2013.167</td>
+<td class="r data">1.1</td>
+<td class="r data">193.5845</td>
+<td class="r data">6</td>
+<td class="r data">24.96571</td>
+<td class="r data">121.54089</td>
+<td class="r data">45.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">360</th>
+<td class="r data">360</td>
+<td class="r data">2013.5</td>
+<td class="r data">5.6</td>
+<td class="r data">2408.993</td>
+<td class="r data">0</td>
+<td class="r data">24.95505</td>
+<td class="r data">121.55964</td>
+<td class="r data">24.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">361</th>
+<td class="r data">361</td>
+<td class="r data">2012.667</td>
+<td class="r data">32.9</td>
+<td class="r data">87.30222</td>
+<td class="r data">10</td>
+<td class="r data">24.983</td>
+<td class="r data">121.54022</td>
+<td class="r data">47.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">362</th>
+<td class="r data">362</td>
+<td class="r data">2013.083</td>
+<td class="r data">41.4</td>
+<td class="r data">281.205</td>
+<td class="r data">8</td>
+<td class="r data">24.97345</td>
+<td class="r data">121.54093</td>
+<td class="r data">63.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">363</th>
+<td class="r data">363</td>
+<td class="r data">2013.417</td>
+<td class="r data">17.1</td>
+<td class="r data">967.4</td>
+<td class="r data">4</td>
+<td class="r data">24.98872</td>
+<td class="r data">121.53408</td>
+<td class="r data">40</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">364</th>
+<td class="r data">364</td>
+<td class="r data">2013.5</td>
+<td class="r data">32.3</td>
+<td class="r data">109.9455</td>
+<td class="r data">10</td>
+<td class="r data">24.98182</td>
+<td class="r data">121.54086</td>
+<td class="r data">48</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">365</th>
+<td class="r data">365</td>
+<td class="r data">2013.417</td>
+<td class="r data">35.3</td>
+<td class="r data">614.1394</td>
+<td class="r data">7</td>
+<td class="r data">24.97913</td>
+<td class="r data">121.53666</td>
+<td class="r data">33.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">366</th>
+<td class="r data">366</td>
+<td class="r data">2012.917</td>
+<td class="r data">17.3</td>
+<td class="r data">2261.432</td>
+<td class="r data">4</td>
+<td class="r data">24.96182</td>
+<td class="r data">121.51222</td>
+<td class="r data">29.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">367</th>
+<td class="r data">367</td>
+<td class="r data">2012.75</td>
+<td class="r data">14.2</td>
+<td class="r data">1801.544</td>
+<td class="r data">1</td>
+<td class="r data">24.95153</td>
+<td class="r data">121.55254</td>
+<td class="r data">24.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">368</th>
+<td class="r data">368</td>
+<td class="r data">2012.833</td>
+<td class="r data">15</td>
+<td class="r data">1828.319</td>
+<td class="r data">2</td>
+<td class="r data">24.96464</td>
+<td class="r data">121.51531</td>
+<td class="r data">20.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">369</th>
+<td class="r data">369</td>
+<td class="r data">2013.417</td>
+<td class="r data">18.2</td>
+<td class="r data">350.8515</td>
+<td class="r data">1</td>
+<td class="r data">24.97544</td>
+<td class="r data">121.53119</td>
+<td class="r data">43.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">370</th>
+<td class="r data">370</td>
+<td class="r data">2012.667</td>
+<td class="r data">20.2</td>
+<td class="r data">2185.128</td>
+<td class="r data">3</td>
+<td class="r data">24.96322</td>
+<td class="r data">121.51237</td>
+<td class="r data">22.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">371</th>
+<td class="r data">371</td>
+<td class="r data">2012.75</td>
+<td class="r data">15.9</td>
+<td class="r data">289.3248</td>
+<td class="r data">5</td>
+<td class="r data">24.98203</td>
+<td class="r data">121.54348</td>
+<td class="r data">42.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">372</th>
+<td class="r data">372</td>
+<td class="r data">2013.5</td>
+<td class="r data">4.1</td>
+<td class="r data">312.8963</td>
+<td class="r data">5</td>
+<td class="r data">24.95591</td>
+<td class="r data">121.53956</td>
+<td class="r data">51.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">373</th>
+<td class="r data">373</td>
+<td class="r data">2013</td>
+<td class="r data">33.9</td>
+<td class="r data">157.6052</td>
+<td class="r data">7</td>
+<td class="r data">24.96628</td>
+<td class="r data">121.54196</td>
+<td class="r data">41.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">374</th>
+<td class="r data">374</td>
+<td class="r data">2013.083</td>
+<td class="r data">0</td>
+<td class="r data">274.0144</td>
+<td class="r data">1</td>
+<td class="r data">24.9748</td>
+<td class="r data">121.53059</td>
+<td class="r data">52.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">375</th>
+<td class="r data">375</td>
+<td class="r data">2013.25</td>
+<td class="r data">5.4</td>
+<td class="r data">390.5684</td>
+<td class="r data">5</td>
+<td class="r data">24.97937</td>
+<td class="r data">121.54245</td>
+<td class="r data">49.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">376</th>
+<td class="r data">376</td>
+<td class="r data">2013.25</td>
+<td class="r data">21.7</td>
+<td class="r data">1157.988</td>
+<td class="r data">0</td>
+<td class="r data">24.96165</td>
+<td class="r data">121.55011</td>
+<td class="r data">23.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">377</th>
+<td class="r data">377</td>
+<td class="r data">2013.417</td>
+<td class="r data">14.7</td>
+<td class="r data">1717.193</td>
+<td class="r data">2</td>
+<td class="r data">24.96447</td>
+<td class="r data">121.51649</td>
+<td class="r data">30.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">378</th>
+<td class="r data">378</td>
+<td class="r data">2013.333</td>
+<td class="r data">3.9</td>
+<td class="r data">49.66105</td>
+<td class="r data">8</td>
+<td class="r data">24.95836</td>
+<td class="r data">121.53756</td>
+<td class="r data">56.8</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">379</th>
+<td class="r data">379</td>
+<td class="r data">2013.333</td>
+<td class="r data">37.3</td>
+<td class="r data">587.8877</td>
+<td class="r data">8</td>
+<td class="r data">24.97077</td>
+<td class="r data">121.54634</td>
+<td class="r data">37.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">380</th>
+<td class="r data">380</td>
+<td class="r data">2013.333</td>
+<td class="r data">0</td>
+<td class="r data">292.9978</td>
+<td class="r data">6</td>
+<td class="r data">24.97744</td>
+<td class="r data">121.54458</td>
+<td class="r data">69.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">381</th>
+<td class="r data">381</td>
+<td class="r data">2013.333</td>
+<td class="r data">14.1</td>
+<td class="r data">289.3248</td>
+<td class="r data">5</td>
+<td class="r data">24.98203</td>
+<td class="r data">121.54348</td>
+<td class="r data">53.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">382</th>
+<td class="r data">382</td>
+<td class="r data">2013.417</td>
+<td class="r data">8</td>
+<td class="r data">132.5469</td>
+<td class="r data">9</td>
+<td class="r data">24.98298</td>
+<td class="r data">121.53981</td>
+<td class="r data">47.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">383</th>
+<td class="r data">383</td>
+<td class="r data">2013</td>
+<td class="r data">16.3</td>
+<td class="r data">3529.564</td>
+<td class="r data">0</td>
+<td class="r data">24.93207</td>
+<td class="r data">121.51597</td>
+<td class="r data">29.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">384</th>
+<td class="r data">384</td>
+<td class="r data">2012.667</td>
+<td class="r data">29.1</td>
+<td class="r data">506.1144</td>
+<td class="r data">4</td>
+<td class="r data">24.97845</td>
+<td class="r data">121.53889</td>
+<td class="r data">40.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">385</th>
+<td class="r data">385</td>
+<td class="r data">2012.75</td>
+<td class="r data">16.1</td>
+<td class="r data">4066.587</td>
+<td class="r data">0</td>
+<td class="r data">24.94297</td>
+<td class="r data">121.50342</td>
+<td class="r data">12.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">386</th>
+<td class="r data">386</td>
+<td class="r data">2013</td>
+<td class="r data">18.3</td>
+<td class="r data">82.88643</td>
+<td class="r data">10</td>
+<td class="r data">24.983</td>
+<td class="r data">121.54026</td>
+<td class="r data">46.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">387</th>
+<td class="r data">387</td>
+<td class="r data">2012.833</td>
+<td class="r data">0</td>
+<td class="r data">185.4296</td>
+<td class="r data">0</td>
+<td class="r data">24.9711</td>
+<td class="r data">121.5317</td>
+<td class="r data">55.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">388</th>
+<td class="r data">388</td>
+<td class="r data">2013.25</td>
+<td class="r data">16.2</td>
+<td class="r data">2103.555</td>
+<td class="r data">3</td>
+<td class="r data">24.96042</td>
+<td class="r data">121.51462</td>
+<td class="r data">25.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">389</th>
+<td class="r data">389</td>
+<td class="r data">2013.5</td>
+<td class="r data">10.4</td>
+<td class="r data">2251.938</td>
+<td class="r data">4</td>
+<td class="r data">24.95957</td>
+<td class="r data">121.51353</td>
+<td class="r data">27.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">390</th>
+<td class="r data">390</td>
+<td class="r data">2013.25</td>
+<td class="r data">40.9</td>
+<td class="r data">122.3619</td>
+<td class="r data">8</td>
+<td class="r data">24.96756</td>
+<td class="r data">121.5423</td>
+<td class="r data">67.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">391</th>
+<td class="r data">391</td>
+<td class="r data">2013.5</td>
+<td class="r data">32.8</td>
+<td class="r data">377.8302</td>
+<td class="r data">9</td>
+<td class="r data">24.97151</td>
+<td class="r data">121.5435</td>
+<td class="r data">38.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">392</th>
+<td class="r data">392</td>
+<td class="r data">2013.583</td>
+<td class="r data">6.2</td>
+<td class="r data">1939.749</td>
+<td class="r data">1</td>
+<td class="r data">24.95155</td>
+<td class="r data">121.55387</td>
+<td class="r data">31.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">393</th>
+<td class="r data">393</td>
+<td class="r data">2013.083</td>
+<td class="r data">42.7</td>
+<td class="r data">443.802</td>
+<td class="r data">6</td>
+<td class="r data">24.97927</td>
+<td class="r data">121.53874</td>
+<td class="r data">35.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">394</th>
+<td class="r data">394</td>
+<td class="r data">2013</td>
+<td class="r data">16.9</td>
+<td class="r data">967.4</td>
+<td class="r data">4</td>
+<td class="r data">24.98872</td>
+<td class="r data">121.53408</td>
+<td class="r data">40.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">395</th>
+<td class="r data">395</td>
+<td class="r data">2013.5</td>
+<td class="r data">32.6</td>
+<td class="r data">4136.271</td>
+<td class="r data">1</td>
+<td class="r data">24.95544</td>
+<td class="r data">121.4963</td>
+<td class="r data">24.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">396</th>
+<td class="r data">396</td>
+<td class="r data">2012.917</td>
+<td class="r data">21.2</td>
+<td class="r data">512.5487</td>
+<td class="r data">4</td>
+<td class="r data">24.974</td>
+<td class="r data">121.53842</td>
+<td class="r data">42.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">397</th>
+<td class="r data">397</td>
+<td class="r data">2012.667</td>
+<td class="r data">37.1</td>
+<td class="r data">918.6357</td>
+<td class="r data">1</td>
+<td class="r data">24.97198</td>
+<td class="r data">121.55063</td>
+<td class="r data">31.9</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">398</th>
+<td class="r data">398</td>
+<td class="r data">2013.417</td>
+<td class="r data">13.1</td>
+<td class="r data">1164.838</td>
+<td class="r data">4</td>
+<td class="r data">24.99156</td>
+<td class="r data">121.53406</td>
+<td class="r data">32.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">399</th>
+<td class="r data">399</td>
+<td class="r data">2013.417</td>
+<td class="r data">14.7</td>
+<td class="r data">1717.193</td>
+<td class="r data">2</td>
+<td class="r data">24.96447</td>
+<td class="r data">121.51649</td>
+<td class="r data">23</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">400</th>
+<td class="r data">400</td>
+<td class="r data">2012.917</td>
+<td class="r data">12.7</td>
+<td class="r data">170.1289</td>
+<td class="r data">1</td>
+<td class="r data">24.97371</td>
+<td class="r data">121.52984</td>
+<td class="r data">37.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">401</th>
+<td class="r data">401</td>
+<td class="r data">2013.25</td>
+<td class="r data">26.8</td>
+<td class="r data">482.7581</td>
+<td class="r data">5</td>
+<td class="r data">24.97433</td>
+<td class="r data">121.53863</td>
+<td class="r data">35.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">402</th>
+<td class="r data">402</td>
+<td class="r data">2013.083</td>
+<td class="r data">7.6</td>
+<td class="r data">2175.03</td>
+<td class="r data">3</td>
+<td class="r data">24.96305</td>
+<td class="r data">121.51254</td>
+<td class="r data">27.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">403</th>
+<td class="r data">403</td>
+<td class="r data">2012.833</td>
+<td class="r data">12.7</td>
+<td class="r data">187.4823</td>
+<td class="r data">1</td>
+<td class="r data">24.97388</td>
+<td class="r data">121.52981</td>
+<td class="r data">28.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">404</th>
+<td class="r data">404</td>
+<td class="r data">2012.667</td>
+<td class="r data">30.9</td>
+<td class="r data">161.942</td>
+<td class="r data">9</td>
+<td class="r data">24.98353</td>
+<td class="r data">121.53966</td>
+<td class="r data">39.7</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">405</th>
+<td class="r data">405</td>
+<td class="r data">2013.333</td>
+<td class="r data">16.4</td>
+<td class="r data">289.3248</td>
+<td class="r data">5</td>
+<td class="r data">24.98203</td>
+<td class="r data">121.54348</td>
+<td class="r data">41.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">406</th>
+<td class="r data">406</td>
+<td class="r data">2012.667</td>
+<td class="r data">23</td>
+<td class="r data">130.9945</td>
+<td class="r data">6</td>
+<td class="r data">24.95663</td>
+<td class="r data">121.53765</td>
+<td class="r data">37.2</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">407</th>
+<td class="r data">407</td>
+<td class="r data">2013.167</td>
+<td class="r data">1.9</td>
+<td class="r data">372.1386</td>
+<td class="r data">7</td>
+<td class="r data">24.97293</td>
+<td class="r data">121.54026</td>
+<td class="r data">40.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">408</th>
+<td class="r data">408</td>
+<td class="r data">2013</td>
+<td class="r data">5.2</td>
+<td class="r data">2408.993</td>
+<td class="r data">0</td>
+<td class="r data">24.95505</td>
+<td class="r data">121.55964</td>
+<td class="r data">22.3</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">409</th>
+<td class="r data">409</td>
+<td class="r data">2013.417</td>
+<td class="r data">18.5</td>
+<td class="r data">2175.744</td>
+<td class="r data">3</td>
+<td class="r data">24.9633</td>
+<td class="r data">121.51243</td>
+<td class="r data">28.1</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">410</th>
+<td class="r data">410</td>
+<td class="r data">2013</td>
+<td class="r data">13.7</td>
+<td class="r data">4082.015</td>
+<td class="r data">0</td>
+<td class="r data">24.94155</td>
+<td class="r data">121.50381</td>
+<td class="r data">15.4</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">411</th>
+<td class="r data">411</td>
+<td class="r data">2012.667</td>
+<td class="r data">5.6</td>
+<td class="r data">90.45606</td>
+<td class="r data">9</td>
+<td class="r data">24.97433</td>
+<td class="r data">121.5431</td>
+<td class="r data">50</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">412</th>
+<td class="r data">412</td>
+<td class="r data">2013.25</td>
+<td class="r data">18.8</td>
+<td class="r data">390.9696</td>
+<td class="r data">7</td>
+<td class="r data">24.97923</td>
+<td class="r data">121.53986</td>
+<td class="r data">40.6</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">413</th>
+<td class="r data">413</td>
+<td class="r data">2013</td>
+<td class="r data">8.1</td>
+<td class="r data">104.8101</td>
+<td class="r data">5</td>
+<td class="r data">24.96674</td>
+<td class="r data">121.54067</td>
+<td class="r data">52.5</td>
+</tr>
+<tr>
+<th class="r rowheader" scope="row">414</th>
+<td class="r data">414</td>
+<td class="r data">2013.5</td>
+<td class="r data">6.5</td>
+<td class="r data">90.45606</td>
+<td class="r data">9</td>
+<td class="r data">24.97433</td>
+<td class="r data">121.5431</td>
+<td class="r data">63.9</td>
+</tr>
+<tr>
+<td class="c linecontent" colspan="9">N = 414&#160;</td>
+</tr>
+</tbody>
+</table>
+</article>
+</section>
+</div>
+</body>
+</html>
